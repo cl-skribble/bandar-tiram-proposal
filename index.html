@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bandar Tiram — Brand Proposal | Skribble</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 15'><path d='M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z' fill='%2300BBBE'/><path d='M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z' fill='%23B71E6C'/></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
 /* === CSS CUSTOM PROPERTIES === */
@@ -232,11 +232,11 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
 .audience-card {
   border-radius: 14px; overflow: hidden;
   display: flex; flex-direction: column;
-  min-height: clamp(200px,32vh,300px);
+  min-height: clamp(260px,40vh,360px);
 }
-.aud-photo { width: 100%; height: clamp(90px,14vh,130px); overflow: hidden; flex-shrink: 0; }
-.aud-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
-.aud-content { padding: clamp(.8rem,1.5vh,1.2rem) clamp(1rem,2vw,1.4rem); display: flex; flex-direction: column; flex: 1; }
+.aud-photo { width: 100%; height: clamp(140px,22vh,200px); overflow: hidden; flex-shrink: 0; }
+.aud-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
+.aud-content { padding: clamp(.7rem,1.2vh,1rem) clamp(1rem,2vw,1.4rem); display: flex; flex-direction: column; flex: 1; }
 .audience-card.a1 { background: var(--magenta); }
 .audience-card.a2 { background: var(--teal); }
 .audience-card.a3 { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); }
@@ -448,6 +448,145 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
 #s14 .ask-contact { font-size: var(--small-size); font-weight: 500; color: rgba(255,255,255,.3); margin-top: clamp(.8rem,1.5vh,1.2rem); }
 #s14 .dot-motif-1 { width: clamp(250px,45vw,550px); height: clamp(250px,45vw,550px); right: calc(-1 * clamp(80px,10vw,150px)); top: 50%; transform: translateY(-50%); opacity: .08; filter: blur(clamp(50px,7vw,90px)); }
 
+/* ════════════════════════════════════════════
+   ERA TIRAM BRAND SYSTEM — Slides 8–15
+════════════════════════════════════════════ */
+
+/* shared Era Tiram utilities */
+.et-lbl {
+  font-family: 'Jost', sans-serif; font-size: var(--label-size);
+  font-weight: 400; letter-spacing: .35em; text-transform: uppercase;
+  color: #7A9B7F; margin-bottom: clamp(.6rem,1.2vh,1rem);
+}
+.et-lbl-cream { color: rgba(245,241,214,.5); }
+.et-serif {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300; line-height: 1.1;
+}
+.et-sans { font-family: 'Jost', sans-serif; font-weight: 300; }
+
+/* era tiram logomark SVG helper */
+.et-mark path, .et-mark rect { fill: currentColor; }
+
+/* ─── SLIDE 7 (ERA TIRAM: THE NAME) ─── */
+#s7 { background: #1D3226 !important; }
+
+/* ─── SLIDE 8 (BRAND STORY) ─── */
+#s8 { background: #F8F5ED !important; }
+#s8 .et-pillar { border-left: 2px solid #2B4535; padding-left: clamp(1rem,1.8vw,1.4rem); margin-bottom: clamp(.8rem,1.5vh,1.2rem); }
+#s8 .et-pillar:last-child { margin-bottom: 0; }
+#s8 .et-pillar .p-num { font-family:'Jost',sans-serif; font-size:var(--label-size); letter-spacing:.35em; color:#7A9B7F; font-weight:400; margin-bottom:2px; }
+#s8 .et-pillar .p-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1rem,2vw,1.5rem); font-weight:600; color:#1D3226; margin-bottom:3px; }
+#s8 .et-pillar .p-desc { font-family:'Jost',sans-serif; font-size:var(--small-size); line-height:1.7; font-weight:300; color:#555; }
+
+/* ─── SLIDE 9 (DESIGN DIRECTIONS) ─── */
+#s9 { background: #F8F5ED !important; }
+#s9 .et-dir-grid { display:grid; grid-template-columns:1fr 1fr; flex:1; gap:0; }
+#s9 .et-dir-card { display:flex; flex-direction:column; justify-content:space-between; padding:clamp(1.5rem,3vw,2.5rem); border-right:1px solid rgba(43,69,53,.1); position:relative; overflow:hidden; }
+#s9 .et-dir-card:last-child { border-right:none; }
+#s9 .et-dir-accent { position:absolute; top:0; left:0; right:0; height:3px; }
+#s9 .et-dir-num { font-size:clamp(3rem,6vw,5rem); font-weight:900; line-height:1; letter-spacing:-.04em; opacity:.06; }
+#s9 .et-dir-name { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,3rem); font-weight:300; line-height:1.1; margin-bottom:4px; }
+#s9 .et-dir-concept { font-family:'Jost',sans-serif; font-size:var(--label-size); letter-spacing:.25em; font-weight:500; text-transform:uppercase; margin-bottom:clamp(.5rem,1vh,.8rem); }
+#s9 .et-dir-mood { font-family:'Jost',sans-serif; font-size:var(--small-size); font-weight:300; line-height:1.7; }
+#s9 .et-dir-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:clamp(.6rem,1.2vh,1rem); }
+#s9 .et-dir-tags span { font-family:'Jost',sans-serif; font-size:clamp(.5rem,.65vw,.62rem); font-weight:500; letter-spacing:.08em; text-transform:uppercase; padding:3px 8px; border-radius:2px; }
+#s9 .dir-heritage { background:#F5EDE4; }
+#s9 .dir-heritage .et-dir-accent { background:#C4773B; }
+#s9 .dir-heritage .et-dir-num { color:#3B2A1E; }
+#s9 .dir-heritage .et-dir-name { color:#3B2A1E; }
+#s9 .dir-heritage .et-dir-concept { color:#8B5A2B; }
+#s9 .dir-heritage .et-dir-mood { color:#5a3a1e; }
+#s9 .dir-heritage .et-dir-tags span { background:rgba(139,90,43,.1); color:#8B5A2B; }
+#s9 .dir-modernism { background:#2B4535; }
+#s9 .dir-modernism .et-dir-accent { background:#7A9B7F; }
+#s9 .dir-modernism .et-dir-num { color:#F5F1D6; }
+#s9 .dir-modernism .et-dir-name { color:#F5F1D6; }
+#s9 .dir-modernism .et-dir-concept { color:#7A9B7F; }
+#s9 .dir-modernism .et-dir-mood { color:#F5F1D6; opacity:.65; }
+#s9 .dir-modernism .et-dir-tags span { background:rgba(245,241,214,.1); color:#F5F1D6; }
+
+/* ─── SLIDE 10 (LOGO SYSTEM) ─── */
+#s10 { background: #2B4535 !important; }
+#s10 .anatomy-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(.6rem,1.2vw,1rem); margin-bottom:clamp(1rem,2vh,1.5rem); }
+#s10 .an-item { display:flex; flex-direction:column; align-items:center; gap:8px; }
+#s10 .an-mark { width:clamp(48px,6vw,72px); height:clamp(48px,6vw,72px); background:rgba(245,241,214,.08); border:1px solid rgba(245,241,214,.15); display:flex; align-items:center; justify-content:center; }
+#s10 .an-label { font-family:'Jost',sans-serif; font-size:var(--label-size); letter-spacing:.2em; color:rgba(245,241,214,.45); font-weight:300; text-align:center; }
+
+/* ─── SLIDE 11 (COLOUR + TYPOGRAPHY) ─── */
+#s11 { background: #F8F5ED !important; }
+#s11 .et-swatches { display:grid; grid-template-columns:repeat(6,1fr); gap:0; }
+#s11 .et-swatch { aspect-ratio:1; display:flex; flex-direction:column; justify-content:flex-end; padding:clamp(.4rem,.8vw,.8rem); }
+#s11 .et-swatch .sw-name { font-family:'Jost',sans-serif; font-size:clamp(.45rem,.55vw,.6rem); letter-spacing:.2em; text-transform:uppercase; font-weight:500; margin-bottom:1px; }
+#s11 .et-swatch .sw-hex { font-family:'Courier New',monospace; font-size:clamp(.4rem,.5vw,.55rem); opacity:.6; }
+
+/* ─── SLIDE 12 (VOICE + PRECINCTS) ─── */
+#s12 { background: #1D3226 !important; }
+#s12 .precinct-chip { font-family:'Jost',sans-serif; font-size:var(--label-size); letter-spacing:.25em; text-transform:uppercase; font-weight:300; border:1px solid rgba(245,241,214,.2); color:#F5F1D6; padding:4px 10px; }
+
+/* ─── SLIDE 13 (DELIVERABLES) ─── */
+#s13 { background: #F8F5ED !important; }
+#s13 .et-scope-item { display:flex; align-items:baseline; gap:clamp(.8rem,1.5vw,1.2rem); padding:clamp(.7rem,1.3vh,1rem) clamp(.8rem,1.5vw,1.2rem); border-radius:6px; background:rgba(43,69,53,.05); border-left:2px solid #2B4535; margin-bottom:clamp(.5rem,1vh,.8rem); }
+#s13 .et-scope-item:last-child { margin-bottom:0; }
+#s13 .et-scope-phase { font-family:'Jost',sans-serif; font-size:var(--label-size); font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:#2B4535; white-space:nowrap; width:clamp(55px,7vw,80px); flex-shrink:0; }
+#s13 .et-scope-title { font-family:'Jost',sans-serif; font-size:var(--small-size); font-weight:700; color:#1D3226; }
+#s13 .et-scope-detail { font-family:'Jost',sans-serif; font-size:var(--small-size); font-weight:300; opacity:.55; margin-top:2px; line-height:1.5; }
+
+/* ─── MOODBOARD SLIDES (s9a / s9b) ─── */
+.mb-layout {
+  display: grid; grid-template-columns: 28fr 72fr;
+  height: 100%; overflow: hidden;
+}
+.mb-info {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: clamp(3rem,6vh,5rem) clamp(1.5rem,3vw,2.5rem) clamp(3rem,6vh,5rem) var(--side-pad);
+  border-right: 1px solid rgba(0,0,0,.08);
+  position: relative; z-index: 1;
+}
+.mb-info.on-dark { border-right-color: rgba(245,241,214,.1); }
+.mb-dir-num {
+  font-family: 'Jost', sans-serif; font-size: var(--label-size);
+  letter-spacing: .35em; text-transform: uppercase;
+  color: #7A9B7F; margin-bottom: clamp(.4rem,.8vh,.6rem);
+}
+.mb-dir-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem,4.5vw,3.8rem); font-weight: 300; line-height: 1.05;
+  margin-bottom: clamp(.6rem,1.2vh,1rem);
+}
+.mb-dir-attrs {
+  display: flex; flex-direction: column; gap: 4px;
+  margin-bottom: clamp(.8rem,1.5vh,1.2rem);
+}
+.mb-dir-attr {
+  font-family: 'Jost', sans-serif; font-size: var(--label-size);
+  letter-spacing: .25em; text-transform: uppercase; font-weight: 400;
+}
+.mb-dir-desc {
+  font-family: 'Jost', sans-serif; font-size: var(--small-size);
+  font-weight: 300; line-height: 1.7; opacity: .65;
+}
+.mb-images {
+  display: grid; grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; gap: 3px; overflow: hidden;
+}
+.mb-images.three-col {
+  grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr;
+}
+.mb-images img {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block; transition: opacity .3s;
+}
+.mb-images img:hover { opacity: .9; }
+
+/* responsive adjustments */
+@media (max-width:900px) {
+  #s9 .et-dir-grid { grid-template-columns:1fr; }
+  #s10 .anatomy-grid { grid-template-columns:repeat(2,1fr); }
+  #s11 .et-swatches { grid-template-columns:repeat(3,1fr); }
+  .mb-layout { grid-template-columns: 1fr; }
+  .mb-images { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -480,7 +619,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
       <path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/>
       <path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/>
     </svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.35)">01 / 14</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.35)">01 / 28</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Introduction</div>
@@ -524,7 +663,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <div class="ghost-num" style="color:var(--magenta)">01</div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="#242424"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="#242424"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="#242424"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="#242424"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="#242424"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="#242424"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="#242424"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="#242424"/></svg>
-    <div class="slide-counter" style="color:#aaa">02 / 14</div>
+    <div class="slide-counter" style="color:#aaa">02 / 28</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:#aaa">Act 01 — Context</div>
@@ -557,7 +696,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <div class="ghost-num" style="color:rgba(255,255,255,.05)">02</div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">03 / 14</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">03 / 28</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 01 — Context</div>
@@ -601,15 +740,34 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   </div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="#242424"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="#242424"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="#242424"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="#242424"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="#242424"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="#242424"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="#242424"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="#242424"/></svg>
-    <div class="slide-counter" style="color:#aaa">04 / 14</div>
+    <div class="slide-counter" style="color:#aaa">04 / 28</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 01 — Context</div></div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 5: AUDIENCES (ACT 2)
+     SLIDE 5: BORING (INTERSTITIAL)
 ════════════════════════════════════════════ -->
-<section class="slide bg-dark" id="s5" aria-label="Audiences">
+<section class="slide" id="s5" aria-label="Bandar Tiram is Boring" style="background:#1a1a1a;">
+  <div class="slide-content" style="justify-content:center;align-items:flex-start;position:relative;z-index:1;">
+    <div class="lbl reveal d1" style="color:rgba(255,255,255,.3);margin-bottom:clamp(1.5rem,3vh,2.5rem)">Act 01 — The Problem</div>
+    <div class="reveal d2" style="font-size:clamp(.9rem,2vw,1.4rem);font-weight:500;color:rgba(255,255,255,.4);line-height:1.4;margin-bottom:clamp(.4rem,.8vh,.6rem)">Bandar Tiram today is</div>
+    <div class="reveal d3" style="font-size:clamp(5rem,18vw,16rem);font-weight:900;line-height:.85;letter-spacing:-.04em;color:#4a4a4a;margin-bottom:clamp(1.5rem,3vh,2.5rem)">BORING.</div>
+    <div class="reveal d4" style="font-size:clamp(.85rem,1.6vw,1.1rem);font-weight:600;color:var(--magenta);letter-spacing:.02em;">And boring doesn't sell homes.</div>
+  </div>
+  <div class="chrome-top">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.25)">05 / 28</div>
+  </div>
+  <div class="chrome-bottom">
+    <div class="act-tag" style="color:rgba(255,255,255,.2)">Act 01 — Context</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 6: AUDIENCES (ACT 2)
+════════════════════════════════════════════ -->
+<section class="slide bg-dark" id="s6aud" aria-label="Audiences">
   <div class="slide-content">
     <div class="lbl reveal d1">Act 02 — Strategy</div>
     <h2 class="h2 reveal d2" style="margin-bottom:clamp(1rem,2vh,1.6rem)">Who We're Building For</h2>
@@ -652,7 +810,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   </div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">05 / 14</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">06 / 28</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 02 — Strategy</div></div>
 </section>
@@ -671,353 +829,501 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   </div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="rgba(255,255,255,0.5)"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="rgba(255,255,255,0.6)"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="rgba(255,255,255,0.6)"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="rgba(255,255,255,0.6)"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="rgba(255,255,255,0.6)"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="rgba(255,255,255,0.6)"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="rgba(255,255,255,0.6)"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="rgba(255,255,255,0.6)"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="rgba(255,255,255,0.6)"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.35)">06 / 14</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.35)">07 / 28</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 02 — Strategy</div></div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 7: THREE CREATIVE DIRECTIONS (hero)
+     SLIDE 7 (08/15): ERA TIRAM — THE NAME
 ════════════════════════════════════════════ -->
-<section class="slide" id="s7" aria-label="Three Creative Directions">
-  <div class="dir-header reveal">
-    <div class="lbl lbl-magenta">Act 02 — Strategy · Three Creative Directions</div>
-    <h2 class="h2" style="color:var(--ink);margin-bottom:0">Each direction, a distinct Bandar Tiram.</h2>
+<section class="slide" id="s7" aria-label="Era Tiram — The Name">
+  <!-- ERA TIRAM: NAME REVEAL -->
+  <div style="position:absolute;right:calc(-1*clamp(60px,8vw,120px));top:50%;transform:translateY(-50%);width:clamp(200px,40vw,500px);height:clamp(200px,40vw,500px);border-radius:50%;background:#2B4535;opacity:.25;filter:blur(clamp(40px,6vw,80px));pointer-events:none;z-index:0;"></div>
+  <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:clamp(4rem,8vh,6rem) var(--side-pad) clamp(3rem,6vh,5rem);position:relative;z-index:1;">
+    <div class="et-lbl et-lbl-cream reveal d1">Act 03 — Creative Strategy · The Name</div>
+    <div class="reveal d2" style="font-family:'Jost',sans-serif;font-size:var(--small-size);letter-spacing:.3em;text-transform:uppercase;color:#F5F1D6;opacity:.22;text-decoration:line-through;margin-bottom:clamp(.3rem,.5vh,.4rem);">Bandar Tiram</div>
+    <div class="reveal d3" style="font-family:'Cormorant Garamond',serif;font-size:clamp(4rem,11vw,9rem);font-weight:300;line-height:.9;color:#F5F1D6;letter-spacing:-.01em;margin-bottom:clamp(1rem,2vh,1.6rem);">Era<br><em style="font-style:italic;">Tiram.</em></div>
+    <p class="reveal d4" style="font-family:'Jost',sans-serif;font-size:var(--h3-size);font-weight:300;color:#F5F1D6;opacity:.5;max-width:520px;line-height:1.65;margin-bottom:clamp(1.5rem,3vh,2.5rem);">A name that carries the weight of where we come from — and the ambition of where we're going. <em style="font-style:italic;">Era</em>: an epoch, a beginning. <em style="font-style:italic;">Tiram</em>: a place, a people, a soul.</p>
+    <div class="reveal d5" style="display:flex;gap:clamp(1.5rem,3vw,2.5rem);align-items:center;flex-wrap:wrap;">
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:600;color:#7A9B7F;margin-bottom:2px;">Era</div><div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#F5F1D6;opacity:.35;font-weight:300;letter-spacing:.1em;">Epoch · Age · Era</div></div>
+      <div style="width:1px;height:32px;background:rgba(245,241,214,.15);"></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:600;color:#7A9B7F;margin-bottom:2px;">Tiram</div><div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#F5F1D6;opacity:.35;font-weight:300;letter-spacing:.1em;">Place · Heritage · Home</div></div>
+      <div style="width:1px;height:32px;background:rgba(245,241,214,.15);"></div>
+      <div><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:600;color:#7A9B7F;margin-bottom:2px;">Era Tiram</div><div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#F5F1D6;opacity:.35;font-weight:300;letter-spacing:.1em;">A township for the ages</div></div>
+    </div>
   </div>
-  <div class="dir-grid">
-
-    <!-- Direction A: AKAR -->
-    <div class="dir-card akar reveal d2">
-      <div class="dir-accent"></div>
-      <div>
-        <div class="dir-num">A</div>
-        <div class="dir-malay">AKAR</div>
-        <div class="dir-english">Roots</div>
-        <div class="dir-concept" style="color:#8B5A2B">Heritage · Community · Warmth</div>
-        <div class="dir-mood" style="color:#6B4423">A brand rooted in Johor's identity — kampung spirit made modern. Warm earthy tones, hand-crafted textures, community-first storytelling. For buyers who value belonging over branding.</div>
-      </div>
-      <div>
-        <div class="dir-tags">
-          <span>Terracotta</span><span>Heritage</span><span>Organic</span><span>Local</span>
-        </div>
-        <div class="palette">
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Direction B: NAIK -->
-    <div class="dir-card naik reveal d3">
-      <div class="dir-accent"></div>
-      <div>
-        <div class="dir-num">B</div>
-        <div class="dir-malay">NAIK</div>
-        <div class="dir-english">Rise</div>
-        <div class="dir-concept">Bold · Urban · Driven</div>
-        <div class="dir-mood">A brand for Johor's ascent. Bold magenta energy, strong typographic architecture, achievement-forward messaging. For aspirants who want a township that reflects their ambition — not their parents' idea of home.</div>
-      </div>
-      <div>
-        <div class="dir-tags">
-          <span>Magenta</span><span>Bold</span><span>Urban</span><span>Aspirational</span>
-        </div>
-        <div class="palette">
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Direction C: CERAH -->
-    <div class="dir-card cerah reveal d4">
-      <div class="dir-accent"></div>
-      <div>
-        <div class="dir-num">C</div>
-        <div class="dir-malay">CERAH</div>
-        <div class="dir-english">Clear · Bright</div>
-        <div class="dir-concept" style="color:var(--teal)">Connected · Open · Future-Ready</div>
-        <div class="dir-mood" style="color:#1a5e5f">A brand that looks forward without forgetting where it stands. Clean teal palette, open spatial design, digital-native expression. For returnees and young investors who see Johor's next 10 years clearly.</div>
-      </div>
-      <div>
-        <div class="dir-tags">
-          <span>Teal</span><span>Clean</span><span>Digital</span><span>Optimistic</span>
-        </div>
-        <div class="palette">
-          <span></span><span></span><span></span><span></span>
-        </div>
-      </div>
-    </div>
-
+  <div class="chrome-top">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">08 / 28</div>
   </div>
-  <div class="chrome-top" style="z-index:11">
+  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Creative Strategy</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 8 (09/15): BRAND STORY
+════════════════════════════════════════════ -->
+<section class="slide" id="s8" aria-label="Brand Story">
+  <div class="slide-content">
+    <div class="et-lbl reveal d1">Act 03 — Creative Strategy · Brand Story</div>
+    <div class="two-col">
+      <div>
+        <div class="reveal d2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;line-height:1.05;color:#1D3226;margin-bottom:clamp(1rem,2vh,1.5rem);">The <em style="font-style:italic;">Synthesis</em><br>of Eras.</div>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#444;margin-bottom:clamp(.6rem,1.2vh,1rem);">Era Tiram is a landmark township development by JLand, conceived as a new urban standard that merges the region's cultural heritage with forward-looking, human-centred design.</p>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#444;">A living ecosystem — a synthesis of community, nature, culture, and infrastructure, designed around the anatomy of how people truly live.</p>
+      </div>
+      <div class="reveal d3" style="display:flex;flex-direction:column;gap:clamp(.8rem,1.6vh,1.3rem);justify-content:center;">
+        <div class="et-pillar">
+          <div class="p-num">Pillar 01</div>
+          <div class="p-title">Modern Heritage</div>
+          <div class="p-desc">Not erasing the past, but elevating it — contemporary living merged with the historic roots of Tiram to create an ultimate modern lifestyle within the city limits.</div>
+        </div>
+        <div class="et-pillar">
+          <div class="p-num">Pillar 02</div>
+          <div class="p-title">Human-Centred</div>
+          <div class="p-desc">Every design decision inspired by the human form and how communities move, gather, and thrive. The city's foundational pillars mirror the anatomy of daily living.</div>
+        </div>
+        <div class="et-pillar">
+          <div class="p-num">Pillar 03</div>
+          <div class="p-title">Clean Modernism</div>
+          <div class="p-desc">A culturally iconic environment built on sustainable, minimal principles — the new urban standard for Johor: functional, refined, and responsible.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ghost-num" style="color:rgba(43,69,53,.06)">08</div>
+  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">09 / 28</div></div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — Creative Strategy</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 9 (10/17): TWO DESIGN DIRECTIONS OVERVIEW
+════════════════════════════════════════════ -->
+<section class="slide" id="s9" aria-label="Two Design Directions" style="display:flex;flex-direction:column;">
+  <div class="reveal" style="padding:clamp(1rem,2.2vh,2rem) var(--side-pad) 0;z-index:2;position:relative;">
+    <div class="et-lbl" style="margin-bottom:4px;">Act 03 — Creative Strategy · Design Directions</div>
+    <h2 class="h2" style="color:#1D3226;margin-bottom:0;">Two directions, one name.</h2>
+  </div>
+  <div class="et-dir-grid" style="flex:1;">
+    <div class="et-dir-card dir-heritage reveal d2">
+      <div class="et-dir-accent"></div>
+      <div>
+        <div class="et-dir-num">01</div>
+        <div class="et-dir-name">Modern<br>Heritage</div>
+        <div class="et-dir-concept">Familiar · Cultural · Warm</div>
+        <div class="et-dir-mood">A visual world that honours Tiram's cultural and natural heritage — familiar, warm, richly textured. Earthy palettes, botanical motifs, and artisan craft sensibilities brought into a modern framework. For buyers who value belonging over branding.</div>
+      </div>
+      <div>
+        <div class="et-dir-tags"><span>Terracotta</span><span>Heritage</span><span>Organic</span><span>Warm</span></div>
+      </div>
+    </div>
+    <div class="et-dir-card dir-modernism reveal d3">
+      <div class="et-dir-accent"></div>
+      <div>
+        <div class="et-dir-num">02</div>
+        <div class="et-dir-name">Clean<br><em style="font-style:italic;">Modernism</em></div>
+        <div class="et-dir-concept">Sustainable · Minimal · Forward</div>
+        <div class="et-dir-mood">An iconic, forward-facing visual language rooted in sustainable minimalism. Inspired by the human body's systems — clean lines, precise geometry, an honest material palette that communicates progress without excess.</div>
+      </div>
+      <div>
+        <div class="et-dir-tags"><span>Forest</span><span>Minimal</span><span>Geometric</span><span>Bold</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-top" style="z-index:11"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">10 / 28</div></div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — Creative Strategy</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 9A (11/17): DIRECTION 1 MOODBOARD — MODERN HERITAGE
+════════════════════════════════════════════ -->
+<section class="slide" id="s9a" aria-label="Direction 1 Moodboard — Modern Heritage" style="background:#F5EDE4;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px;">
+  <img src="moodboards/page-06.png" alt="Modern Heritage moodboard 1" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <img src="moodboards/page-07.png" alt="Modern Heritage moodboard 2" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <img src="moodboards/page-08.png" alt="Modern Heritage moodboard 3" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <img src="moodboards/page-09.png" alt="Modern Heritage moodboard 4" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:#aaa">07 / 14</div>
+    <div class="slide-counter" style="color:rgba(59,42,30,.4)">11 / 28</div>
   </div>
-  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 02 — Strategy</div></div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(59,42,30,.35)">Act 03 — Creative Strategy · Direction 01</div>
+  </div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 8: IDENTITY SYSTEM (ACT 3)
+     SLIDE 9B (12/17): DIRECTION 2 MOODBOARD — CLEAN MODERNISM
 ════════════════════════════════════════════ -->
-<section class="slide bg-dark" id="s8" aria-label="Identity System">
-  <div class="slide-content">
-    <div class="lbl reveal d1">Act 03 — The Work · Identity</div>
+<section class="slide" id="s9b" aria-label="Direction 2 Moodboard — Clean Modernism" style="background:#2B4535;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px;">
+  <img src="moodboards/page-10.png" alt="Clean Modernism moodboard 1" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <img src="moodboards/page-11.png" alt="Clean Modernism moodboard 2" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <img src="moodboards/page-12.png" alt="Clean Modernism moodboard 3" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <img src="moodboards/page-13.png" alt="Clean Modernism moodboard 4" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">12 / 28</div>
+  </div>
+  <div class="chrome-bottom">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Creative Strategy · Direction 02</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 10 (11/15): THE LOGO SYSTEM
+════════════════════════════════════════════ -->
+<section class="slide" id="s10" aria-label="The Logo System">
+  <div class="slide-content" style="position:relative;z-index:1;">
+    <div class="et-lbl et-lbl-cream reveal d1">Act 03 — Creative Strategy · Logo System</div>
     <div class="two-col">
       <div>
-        <h2 class="h2 reveal d2">The Identity System</h2>
-        <p class="body reveal d3" style="opacity:.6;margin-bottom:clamp(1rem,2vh,1.5rem)">A complete brand system built to work at every scale — from billboard to business card, launch campaign to years of consistent execution.</p>
-        <ul class="bullet-list magenta-dots reveal d4" style="opacity:.8">
-          <li>Township name refinement + tagline development</li>
-          <li>Primary logo mark + wordmark system</li>
-          <li>Brand colour palette + typography</li>
-          <li>Brand voice guidelines + messaging framework</li>
-          <li>Usage rules for print, digital, environmental</li>
+        <div class="reveal d2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:300;line-height:1.1;color:#F5F1D6;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">The Mark<br>Explained.</div>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#F5F1D6;opacity:.55;margin-bottom:clamp(.6rem,1.2vh,1rem);">The Era Tiram logomark is a geometric seal constructed from four interlocking ideas — each element carrying meaning that compounds into the whole.</p>
+        <p class="reveal d4" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#F5F1D6;opacity:.55;">The result reads simultaneously as a tree canopy, a cultural weave, and a typographic ligature — anchoring the brand in both nature and place.</p>
+      </div>
+      <div class="reveal d3" style="display:flex;flex-direction:column;gap:clamp(.6rem,1.2vh,1rem);">
+        <div class="anatomy-grid">
+          <div class="an-item">
+            <div class="an-mark">
+              <svg width="38" height="38" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="4" fill="#F5F1D6"/><rect x="4" y="40" width="40" height="4" fill="#F5F1D6"/><rect x="22" y="8" width="4" height="32" fill="#F5F1D6"/><line x1="22" y1="18" x2="8" y2="12" stroke="#F5F1D6" stroke-width="2.5" stroke-linecap="round"/><line x1="26" y1="18" x2="40" y2="12" stroke="#F5F1D6" stroke-width="2.5" stroke-linecap="round"/><line x1="22" y1="28" x2="8" y2="34" stroke="#F5F1D6" stroke-width="2.5" stroke-linecap="round"/><line x1="26" y1="28" x2="40" y2="34" stroke="#F5F1D6" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="an-label">Bloodflow</div>
+          </div>
+          <div class="an-item">
+            <div class="an-mark">
+              <svg width="38" height="38" viewBox="0 0 48 48" fill="none"><rect x="12" y="8" width="4" height="32" fill="#F5F1D6"/><rect x="12" y="8" width="22" height="4" fill="#F5F1D6"/><rect x="12" y="22" width="18" height="4" fill="#F5F1D6"/><rect x="12" y="36" width="22" height="4" fill="#F5F1D6"/></svg>
+            </div>
+            <div class="an-label">E for Era</div>
+          </div>
+          <div class="an-item">
+            <div class="an-mark">
+              <svg width="38" height="38" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="4" fill="#F5F1D6"/><rect x="22" y="12" width="4" height="28" fill="#F5F1D6"/></svg>
+            </div>
+            <div class="an-label">T for Tiram</div>
+          </div>
+          <div class="an-item">
+            <div class="an-mark">
+              <svg width="38" height="38" viewBox="0 0 48 48" fill="none"><ellipse cx="16" cy="18" rx="6" ry="4" fill="#F5F1D6" transform="rotate(-15 16 18)"/><ellipse cx="32" cy="18" rx="6" ry="4" fill="#F5F1D6" transform="rotate(15 32 18)"/><ellipse cx="16" cy="30" rx="6" ry="4" fill="#F5F1D6" transform="rotate(15 16 30)"/><ellipse cx="32" cy="30" rx="6" ry="4" fill="#F5F1D6" transform="rotate(-15 32 30)"/></svg>
+            </div>
+            <div class="an-label">Leaf / Growth</div>
+          </div>
+        </div>
+        <div style="background:rgba(245,241,214,.06);border:1px solid rgba(245,241,214,.1);padding:clamp(.8rem,1.6vh,1.2rem);display:flex;align-items:center;gap:clamp(1rem,2vw,1.8rem);">
+          <svg width="44" height="48" viewBox="0 0 48 52" fill="none"><rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/><rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/><rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/><rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/><path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/></svg>
+          <div>
+            <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.35em;text-transform:uppercase;color:#7A9B7F;margin-bottom:6px;">Primary Mark</div>
+            <div style="font-family:'Jost',sans-serif;font-size:clamp(.55rem,.75vw,.65rem);letter-spacing:.3em;text-transform:uppercase;color:#F5F1D6;margin-bottom:2px;font-weight:300;">E R A</div>
+            <div style="font-family:'Jost',sans-serif;font-size:clamp(.65rem,.9vw,.78rem);letter-spacing:.35em;text-transform:uppercase;color:#F5F1D6;font-weight:300;">T I R A M</div>
+          </div>
+          <div style="margin-left:auto;font-family:'Jost',sans-serif;font-size:var(--small-size);color:#F5F1D6;opacity:.35;font-weight:300;line-height:1.7;max-width:200px;">Three approved colourways: Forest Green on ivory (primary), Deep Forest on white (digital), Cream on dark (reversed).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ghost-num" style="color:rgba(245,241,214,.04)">10</div>
+  <div class="chrome-top">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">13 / 28</div>
+  </div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Creative Strategy</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 11 (12/15): COLOUR + TYPOGRAPHY
+════════════════════════════════════════════ -->
+<section class="slide" id="s11" aria-label="Colour and Typography">
+  <div class="slide-content">
+    <div class="et-lbl reveal d1">Act 03 — Creative Strategy · Visual Language</div>
+    <div class="two-col">
+      <div>
+        <div class="reveal d2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.5rem);font-weight:300;line-height:1.05;color:#1D3226;margin-bottom:clamp(.8rem,1.6vh,1.2rem);">Colour &amp;<br><em style="font-style:italic;">Typography.</em></div>
+        <div class="et-swatches reveal d3">
+          <div class="et-swatch" style="background:#2B4535;color:#F5F1D6;"><div class="sw-name">Forest</div><div class="sw-hex">#2B4535</div></div>
+          <div class="et-swatch" style="background:#1D3226;color:#F5F1D6;"><div class="sw-name">Deep Forest</div><div class="sw-hex">#1D3226</div></div>
+          <div class="et-swatch" style="background:#F5F1D6;color:#2B4535;border:1px solid rgba(43,69,53,.1);"><div class="sw-name">Cream</div><div class="sw-hex">#F5F1D6</div></div>
+          <div class="et-swatch" style="background:#F8F5ED;color:#2B4535;border:1px solid rgba(43,69,53,.08);"><div class="sw-name">Ivory</div><div class="sw-hex">#F8F5ED</div></div>
+          <div class="et-swatch" style="background:#7A9B7F;color:#F8F5ED;"><div class="sw-name">Sage</div><div class="sw-hex">#7A9B7F</div></div>
+          <div class="et-swatch" style="background:#3B2A1E;color:#F5F1D6;"><div class="sw-name">Dark Brown</div><div class="sw-hex">#3B2A1E</div></div>
+        </div>
+        <p class="reveal d4" style="font-family:'Jost',sans-serif;font-size:var(--small-size);font-weight:300;color:#666;line-height:1.7;margin-top:clamp(.6rem,1.2vh,1rem);">A palette rooted in the natural landscape of Tiram — the deep forest canopy, warm earth, and open sky. Timeless, never trend-led.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:clamp(1.2rem,2.5vh,2rem);">
+        <div class="reveal d3" style="border-left:2px solid #2B4535;padding-left:clamp(.8rem,1.5vw,1.2rem);">
+          <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.35em;text-transform:uppercase;color:#7A9B7F;margin-bottom:8px;">Display — Cormorant Garamond</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:300;line-height:1.05;color:#1D3226;">The <em style="font-style:italic;">Anatomy</em><br>of Living.</div>
+          <div style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#888;font-weight:300;margin-top:6px;">Light 300 · Regular 400 · SemiBold 600 · Roman &amp; Italic</div>
+        </div>
+        <div class="reveal d4" style="border-left:2px solid #7A9B7F;padding-left:clamp(.8rem,1.5vw,1.2rem);">
+          <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.35em;text-transform:uppercase;color:#7A9B7F;margin-bottom:8px;">Body &amp; UI — Jost</div>
+          <div style="font-family:'Jost',sans-serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:200;text-transform:uppercase;letter-spacing:.1em;color:#1D3226;">E R A &nbsp; T I R A M</div>
+          <div style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#888;font-weight:300;margin-top:6px;">ExtraLight 200 · Light 300 · Regular 400 · Medium 500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ghost-num" style="color:rgba(43,69,53,.05)">11</div>
+  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">14 / 28</div></div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — Creative Strategy</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 12 (13/15): VOICE, TAGLINES + PRECINCTS
+════════════════════════════════════════════ -->
+<section class="slide" id="s12" aria-label="Voice, Taglines and Precincts">
+  <div class="slide-content">
+    <div class="et-lbl et-lbl-cream reveal d1">Act 03 — Creative Strategy · Voice &amp; Identity System</div>
+    <div class="two-col">
+      <div>
+        <div class="reveal d2" style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.35em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Core Taglines</div>
+        <div class="reveal d3" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.8rem);font-weight:300;line-height:1.15;color:#F5F1D6;margin-bottom:clamp(.4rem,.8vh,.7rem);">"The Anatomy<br>of <em style="font-style:italic;">Living."</em></div>
+        <div class="reveal d4" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2.4rem);font-weight:300;line-height:1.2;color:#F5F1D6;opacity:.55;margin-bottom:clamp(.4rem,.8vh,.7rem);">"The Synthesis<br>of <em style="font-style:italic;">Eras."</em></div>
+        <div class="reveal d5" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.3vw,1.8rem);font-weight:300;line-height:1.2;color:#F5F1D6;opacity:.35;margin-bottom:clamp(1rem,2vh,1.5rem);">"A New Way of <em style="font-style:italic;">Living."</em></div>
+        <div class="reveal d5">
+          <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.35em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.6rem,1.2vh,.9rem);">Precinct Sub-Brands</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="precinct-chip">Era Hub</span>
+            <span class="precinct-chip">Era Valley</span>
+            <span class="precinct-chip">Era Central</span>
+            <span class="precinct-chip">Era Gateway</span>
+            <span class="precinct-chip">Era Ridgeway</span>
+            <span class="precinct-chip">Era Southhills</span>
+            <span class="precinct-chip">Era Westwood</span>
+            <span class="precinct-chip">Era Eastwood</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;">
+        <div class="reveal d2" style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.35em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Brand Voice</div>
+        <ul style="list-style:none;">
+          <li class="reveal d3" style="padding:clamp(.6rem,1.2vh,1rem) 0;border-bottom:1px solid rgba(245,241,214,.08);display:flex;gap:clamp(.6rem,1vw,.9rem);align-items:flex-start;">
+            <span style="color:#7A9B7F;font-size:14px;padding-top:1px;flex-shrink:0;">→</span>
+            <div><div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:500;color:#F5F1D6;letter-spacing:.05em;margin-bottom:3px;">Considered</div><div style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#F5F1D6;opacity:.5;font-weight:300;line-height:1.6;">Purposeful language. Every word earns its place. No hyperbole, no filler.</div></div>
+          </li>
+          <li class="reveal d4" style="padding:clamp(.6rem,1.2vh,1rem) 0;border-bottom:1px solid rgba(245,241,214,.08);display:flex;gap:clamp(.6rem,1vw,.9rem);align-items:flex-start;">
+            <span style="color:#7A9B7F;font-size:14px;padding-top:1px;flex-shrink:0;">→</span>
+            <div><div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:500;color:#F5F1D6;letter-spacing:.05em;margin-bottom:3px;">Rooted</div><div style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#F5F1D6;opacity:.5;font-weight:300;line-height:1.6;">Anchored in place, culture, and community. References to Tiram's heritage feel organic, not performative.</div></div>
+          </li>
+          <li class="reveal d5" style="padding:clamp(.6rem,1.2vh,1rem) 0;border-bottom:1px solid rgba(245,241,214,.08);display:flex;gap:clamp(.6rem,1vw,.9rem);align-items:flex-start;">
+            <span style="color:#7A9B7F;font-size:14px;padding-top:1px;flex-shrink:0;">→</span>
+            <div><div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:500;color:#F5F1D6;letter-spacing:.05em;margin-bottom:3px;">Forward</div><div style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#F5F1D6;opacity:.5;font-weight:300;line-height:1.6;">Optimistic about the future without being blind to the present. The brand invites — it does not sell.</div></div>
+          </li>
+          <li class="reveal d6" style="padding:clamp(.6rem,1.2vh,1rem) 0;display:flex;gap:clamp(.6rem,1vw,.9rem);align-items:flex-start;border-top:1px solid rgba(245,241,214,.08);">
+            <span style="color:#7A9B7F;font-size:14px;padding-top:1px;flex-shrink:0;">→</span>
+            <div><div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:500;color:#F5F1D6;letter-spacing:.05em;margin-bottom:3px;">Human</div><div style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#F5F1D6;opacity:.5;font-weight:300;line-height:1.6;">Warm, accessible, grounded. Speaks to real people and their real lives.</div></div>
+          </li>
         </ul>
       </div>
-      <div class="reveal d3" style="display:flex;flex-direction:column;gap:clamp(.6rem,1.2vh,.9rem)">
-        <div style="background:var(--magenta);border-radius:10px;padding:clamp(1rem,2vh,1.5rem);flex:1;display:flex;flex-direction:column;justify-content:flex-end">
-          <div style="font-size:var(--label-size);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:6px">Name + Mark</div>
-          <div style="font-size:clamp(1.2rem,2.5vw,2rem);font-weight:900;color:white;letter-spacing:-.02em">Bandar Tiram</div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(.6rem,1.2vh,.9rem);flex:1">
-          <div style="background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center">
-            <div style="width:clamp(24px,3vw,36px);height:clamp(24px,3vw,36px);border-radius:50%;background:rgba(255,255,255,.3)"></div>
-          </div>
-          <div style="background:rgba(255,255,255,.06);border-radius:10px;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(.6rem,1.2vh,.9rem)">
-            <div style="font-size:clamp(.5rem,.8vw,.65rem);font-weight:700;color:rgba(255,255,255,.3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px">Typeface</div>
-            <div style="font-size:clamp(.8rem,1.5vw,1.1rem);font-weight:800;color:white">Montserrat</div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-  <div class="ghost-num" style="color:rgba(255,255,255,.04)">08</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:rgba(255,255,255,.3)">08 / 14</div></div>
-  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — The Work</div></div>
+  <div class="ghost-num" style="color:rgba(245,241,214,.04)">12</div>
+  <div class="chrome-top">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">15 / 28</div>
+  </div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Creative Strategy</div></div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 9: GO-TO-MARKET
+     SLIDE 16/28: PRECINCT LOGO SUITES
 ════════════════════════════════════════════ -->
-<section class="slide bg-cream" id="s9" aria-label="Go-to-Market">
+<section class="slide" id="sp19" aria-label="Precinct Logo Suites" style="background:#F8F5ED;overflow:hidden;">
+  <img src="moodboards/page-19.png" alt="Era Tiram precinct logo suites — all 8 precincts" style="width:100%;height:100%;object-fit:contain;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(29,50,38,.4)">16 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(29,50,38,.35)">Act 03 — Logo Suites · Precincts</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 17/28: BRAND APPLICATIONS — BILLBOARD + WAYFINDING
+════════════════════════════════════════════ -->
+<section class="slide" id="sp20" aria-label="Brand Applications — Billboard and Wayfinding" style="background:#1D3226;overflow:hidden;">
+  <img src="moodboards/page-20.png" alt="Era Tiram billboard and wayfinding signage applications" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">17 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Environmental</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 18/28: BRAND APPLICATIONS — BROCHURE + SOCIAL
+════════════════════════════════════════════ -->
+<section class="slide" id="sp21" aria-label="Brand Applications — Brochure and Social Media" style="background:#1D3226;overflow:hidden;">
+  <img src="moodboards/page-21.png" alt="Era Tiram brochure and social media post applications" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">18 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Print &amp; Digital</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 19/28: BRAND APPLICATIONS — HOARDING
+════════════════════════════════════════════ -->
+<section class="slide" id="sp22" aria-label="Brand Applications — Site Hoarding" style="background:#1D3226;overflow:hidden;">
+  <img src="moodboards/page-22.png" alt="Era Tiram site hoarding application" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">19 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Environmental</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 20/28: BRAND APPLICATIONS — BUILDING + MERCHANDISE
+════════════════════════════════════════════ -->
+<section class="slide" id="sp23" aria-label="Brand Applications — Building Facade and Tote Bag" style="background:#888;overflow:hidden;">
+  <img src="moodboards/page-23.png" alt="Era Tiram building facade and tote bag merchandise" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">20 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Merchandise</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 21/28: BRAND APPLICATIONS — UNIFORM + HARDHAT
+════════════════════════════════════════════ -->
+<section class="slide" id="sp24" aria-label="Brand Applications — Hard Hat and Uniform" style="background:#E8E3DA;overflow:hidden;">
+  <img src="moodboards/page-24.png" alt="Era Tiram hard hat and uniform applications" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(29,50,38,.35)">21 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(29,50,38,.3)">Act 03 — Brand Applications · Uniforms</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 22/28: BRAND APPLICATIONS — ARCHITECTURE RENDER
+════════════════════════════════════════════ -->
+<section class="slide" id="sp25" aria-label="Brand Applications — Architecture Render" style="background:#2B4535;overflow:hidden;">
+  <img src="moodboards/page-25.png" alt="Era Tiram logo on architectural render" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">22 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Spatial</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 23/28: BRAND APPLICATIONS — SITE WORKERS
+════════════════════════════════════════════ -->
+<section class="slide" id="sp26" aria-label="Brand Applications — Site Workers Uniform" style="background:#2B4535;overflow:hidden;">
+  <img src="moodboards/page-26.png" alt="Era Tiram site workers in branded uniforms" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">23 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Uniforms</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 24/28: BRAND APPLICATIONS — STATIONERY + BUILDING
+════════════════════════════════════════════ -->
+<section class="slide" id="sp27" aria-label="Brand Applications — Business Cards and Building" style="background:#1D3226;overflow:hidden;">
+  <img src="moodboards/page-27.png" alt="Era Tiram business cards and building render with EST 2026" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">24 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Print</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 25/28: BRAND APPLICATIONS — TRANSIT ADVERTISING
+════════════════════════════════════════════ -->
+<section class="slide" id="sp28" aria-label="Brand Applications — Transit Advertising" style="background:#1a1a1a;overflow:hidden;">
+  <img src="moodboards/page-28.png" alt="Era Tiram transit advertising — airport lightbox and billboard" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">25 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · OOH Media</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 26/28: BRAND APPLICATIONS — KIOSK + FLAG BANNER
+════════════════════════════════════════════ -->
+<section class="slide" id="sp29" aria-label="Brand Applications — Kiosk and Flag Banner" style="background:#2B4535;overflow:hidden;">
+  <img src="moodboards/page-29.png" alt="Era Tiram outdoor kiosk display and flag banner" style="width:100%;height:100%;object-fit:cover;display:block;">
+  <div class="chrome-top" style="position:absolute;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">26 / 28</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;">
+    <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · OOH Media</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 13 (14/15): BRAND DELIVERABLES
+════════════════════════════════════════════ -->
+<section class="slide" id="s13" aria-label="Brand Deliverables">
   <div class="slide-content">
-    <div class="lbl reveal d1">Act 03 — The Work · Go-to-Market</div>
+    <div class="et-lbl reveal d1">Act 04 — The Engagement</div>
     <div class="two-col">
       <div>
-        <h2 class="h2 reveal d2">From Brand to Market in 6 Months</h2>
-        <p class="body reveal d3" style="opacity:.6;margin-bottom:clamp(1rem,2vh,1.5rem)">A phased rollout that builds the brand before spending on media — so every ringgit works harder.</p>
+        <h2 class="h2 reveal d2" style="color:#1D3226;">What We Deliver<br>for Era Tiram.</h2>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#444;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">A phased engagement built around milestones, not retainers — so you see and approve the work before the next phase begins.</p>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--small-size);font-weight:300;color:#888;line-height:1.6;">Detailed investment to be confirmed upon scoping. This reflects the typical structure of a full township brand system.</p>
       </div>
-      <div class="phase-list reveal d3">
-        <div class="phase-item">
-          <div class="phase-badge">M 1–2</div>
-          <div class="phase-text"><strong>Discovery + Brand Build</strong>Audience research, brand strategy, identity system, brand guidelines.</div>
+      <div class="reveal d3">
+        <div class="et-scope-item">
+          <div class="et-scope-phase">Phase 1</div>
+          <div><div class="et-scope-title">Discovery + Brand Strategy</div><div class="et-scope-detail">Audience research · Brand audit · Positioning · Creative brief · 6–8 weeks</div></div>
         </div>
-        <div class="phase-item">
-          <div class="phase-badge">M 3–4</div>
-          <div class="phase-text"><strong>Launch Campaign</strong>Campaign concept, hero content, press launch, digital activation, OOH.</div>
+        <div class="et-scope-item" style="border-left-color:#7A9B7F;">
+          <div class="et-scope-phase" style="color:#7A9B7F;">Phase 2</div>
+          <div><div class="et-scope-title">Era Tiram Identity System</div><div class="et-scope-detail">Final logo · Colour · Typography · Voice · Brand book · Precinct sub-brands · 6–8 weeks</div></div>
         </div>
-        <div class="phase-item">
-          <div class="phase-badge teal">M 5–6</div>
-          <div class="phase-text"><strong>Community Building</strong>Social media programme, content calendar, community events, performance optimisation.</div>
+        <div class="et-scope-item">
+          <div class="et-scope-phase">Phase 3</div>
+          <div><div class="et-scope-title">Launch Campaign</div><div class="et-scope-detail">Campaign concept · Hero content · Digital activation · OOH · PR · 8–10 weeks</div></div>
         </div>
-        <div class="phase-item" style="border-left:3px solid var(--teal)">
-          <div class="phase-badge teal">Ongoing</div>
-          <div class="phase-text"><strong>Brand Stewardship</strong>Monthly retainer option — strategy, content, media, reporting.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ghost-num" style="color:var(--magenta)">09</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">09 / 14</div></div>
-  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — The Work</div></div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SLIDE 10: DIGITAL PRESENCE
-════════════════════════════════════════════ -->
-<section class="slide bg-dark" id="s10" aria-label="Digital Presence">
-  <div class="slide-content">
-    <div class="lbl reveal d1">Act 03 — The Work · Digital</div>
-    <h2 class="h2 reveal d2" style="margin-bottom:clamp(.6rem,1.2vh,1rem)">Built to Be Found. Built to Convert.</h2>
-    <p class="body reveal d2" style="opacity:.55;margin-bottom:clamp(1rem,2vh,1.6rem);max-width:480px">Every digital touchpoint — from first impression to sales inquiry — designed as part of one coherent brand experience.</p>
-    <div class="channel-grid reveal d3">
-      <div class="channel-card">
-        <div class="channel-name">Brand Website</div>
-        <div class="channel-desc">Story-first design. Township vision, lifestyle, community — before unit specs. Built to earn trust, then convert.</div>
-      </div>
-      <div class="channel-card" style="border-top-color:var(--magenta)">
-        <div class="channel-name" style="color:var(--magenta)">Social Media</div>
-        <div class="channel-desc">Instagram + TikTok content programme. Township life, construction progress, community stories. Consistent, scroll-stopping.</div>
-      </div>
-      <div class="channel-card">
-        <div class="channel-name">Digital OOH</div>
-        <div class="channel-desc">JB–Singapore corridor targeting. Commuter route placements, Woodlands checkpoint, key arterials. Reach buyers in transit.</div>
-      </div>
-      <div class="channel-card" style="border-top-color:var(--magenta)">
-        <div class="channel-name" style="color:var(--magenta)">Performance Media</div>
-        <div class="channel-desc">Property portal campaigns, Google, Meta. Lead generation with brand-quality creative — not generic spec-sheet ads.</div>
-      </div>
-    </div>
-  </div>
-  <div class="ghost-num" style="color:rgba(255,255,255,.04)">10</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:rgba(255,255,255,.3)">10 / 14</div></div>
-  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — The Work</div></div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SLIDE 11: COLLATERAL & ENVIRONMENT
-════════════════════════════════════════════ -->
-<section class="slide bg-cream" id="s11" aria-label="Collateral and Environment">
-  <div class="slide-content">
-    <div class="lbl reveal d1">Act 03 — The Work · Collateral</div>
-    <div class="two-col">
-      <div>
-        <h2 class="h2 reveal d2">Where the Brand Lives Offline</h2>
-        <p class="body reveal d3" style="opacity:.6;margin-bottom:clamp(.8rem,1.5vh,1.2rem)">Every physical touchpoint — from site signage to sales gallery — reinforces the brand story and builds confidence at the moment of decision.</p>
-        <ul class="bullet-list reveal d4">
-          <li>Sales gallery concept + spatial branding</li>
-          <li>Property brochure + floor plan presentation</li>
-          <li>Site signage, hoarding, wayfinding system</li>
-          <li>Sales team collateral + brand standards training</li>
-        </ul>
-      </div>
-      <div class="reveal d3" style="display:flex;flex-direction:column;gap:clamp(.6rem,1.2vh,.9rem)">
-        <div style="background:var(--carbon);border-radius:10px;padding:clamp(1rem,2vh,1.5rem);flex:2;display:flex;flex-direction:column;justify-content:space-between">
-          <div style="font-size:var(--label-size);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)">Sales Gallery</div>
-          <div>
-            <div style="width:100%;height:3px;background:var(--magenta);border-radius:2px;margin-bottom:8px"></div>
-            <div style="font-size:var(--small-size);color:rgba(255,255,255,.5);font-weight:500">Brand-first experience design</div>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(.6rem,1.2vh,.9rem);flex:1">
-          <div style="background:var(--magenta);border-radius:10px;padding:clamp(.7rem,1.2vh,1rem);display:flex;flex-direction:column;justify-content:flex-end">
-            <div style="font-size:var(--label-size);font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.15em">Brochure</div>
-          </div>
-          <div style="background:rgba(0,0,0,.06);border-radius:10px;padding:clamp(.7rem,1.2vh,1rem);display:flex;flex-direction:column;justify-content:flex-end;border-top:2px solid var(--teal)">
-            <div style="font-size:var(--label-size);font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.15em">Signage</div>
-          </div>
+        <div class="et-scope-item" style="border-left-color:#7A9B7F;">
+          <div class="et-scope-phase" style="color:#7A9B7F;">Retainer</div>
+          <div><div class="et-scope-title">Ongoing Brand Management</div><div class="et-scope-detail">Monthly strategy · Content · Media · Reporting · Flexible scope</div></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="ghost-num" style="color:var(--magenta)">11</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">11 / 14</div></div>
-  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — The Work</div></div>
+  <div class="ghost-num" style="color:rgba(43,69,53,.05)">13</div>
+  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">27 / 28</div></div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 04 — The Engagement</div></div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     SLIDE 12: WHY SKRIBBLE (ACT 4)
+     SLIDE 14 (15/15): THE ASK
 ════════════════════════════════════════════ -->
-<section class="slide bg-dark" id="s12" aria-label="Why Skribble">
-  <div class="slide-content">
-    <div class="lbl reveal d1">Act 04 — Credentials</div>
-    <div class="two-col">
-      <div>
-        <h2 class="h2 reveal d2">We're Not a Vendor.<br>We're Your Brand Partner.</h2>
-        <p class="body reveal d3" style="opacity:.6;margin-bottom:clamp(1rem,2vh,1.5rem)">Full-service: brand strategy, creative, digital marketing, tech development. Everything under one roof — no briefing five agencies and hoping they speak the same language.</p>
-        <ul class="bullet-list reveal d4">
-          <li>Malaysia-based. Built for Malaysian brands and their nuances.</li>
-          <li>Johor-aware. We understand this market, its buyers, its language.</li>
-          <li>Award-winning — but focused on results, not trophies.</li>
-        </ul>
-      </div>
-      <div class="award-grid reveal d3">
-        <div class="award-card">
-          <div class="award-medal gold">Gold</div>
-          <div class="award-name">Best Agency Culture</div>
-          <div class="award-year">2024</div>
-        </div>
-        <div class="award-card">
-          <div class="award-medal gold">Gold</div>
-          <div class="award-name">Best Account Manager</div>
-          <div class="award-year">2025 · Skribble × Karyn Chall</div>
-        </div>
-        <div class="award-card">
-          <div class="award-medal gold">Gold</div>
-          <div class="award-name">Rising Star</div>
-          <div class="award-year">2024 · Skribble × Wei Wen</div>
-        </div>
-        <div class="award-card">
-          <div class="award-medal silver">Silver</div>
-          <div class="award-name">Best Strategist</div>
-          <div class="award-year">2025 · Skribble × Roger Wong</div>
-        </div>
-        <div class="award-card">
-          <div class="award-medal silver">Silver</div>
-          <div class="award-name">Best Employer — SOBA</div>
-          <div class="award-year">2024</div>
-        </div>
-        <div class="award-card">
-          <div class="award-medal bronze">Bronze</div>
-          <div class="award-name">Agency Leader of the Year</div>
-          <div class="award-year">2023</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ghost-num" style="color:rgba(255,255,255,.04)">12</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:rgba(255,255,255,.3)">12 / 14</div></div>
-  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 04 — Credentials</div></div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SLIDE 13: COMMERCIAL PROPOSAL
-════════════════════════════════════════════ -->
-<section class="slide bg-cream" id="s13" aria-label="Commercial Proposal">
-  <div class="slide-content">
-    <div class="lbl reveal d1">Act 04 — Commercial</div>
-    <div class="two-col">
-      <div>
-        <h2 class="h2 reveal d2">What We're Proposing</h2>
-        <p class="body reveal d3" style="opacity:.6;margin-bottom:clamp(1rem,2vh,1.5rem)">A phased engagement built around milestones, not retainers — so you see and approve the work before the next phase begins.</p>
-        <p class="body reveal d3" style="opacity:.5;font-size:var(--small-size)">Detailed investment figures to be shared upon scoping confirmation. This overview reflects the typical structure of a township brand engagement.</p>
-      </div>
-      <div class="scope-list reveal d3">
-        <div class="scope-item">
-          <div class="scope-phase">Phase 1</div>
-          <div>
-            <div class="scope-title">Discovery + Brand Strategy</div>
-            <div class="scope-detail">Audience research · Brand audit · Positioning · Creative brief · 6–8 weeks</div>
-          </div>
-        </div>
-        <div class="scope-item" style="border-left-color:var(--teal)">
-          <div class="scope-phase" style="color:var(--teal)">Phase 2</div>
-          <div>
-            <div class="scope-title">Identity System + Brand Book</div>
-            <div class="scope-detail">Logo · Colour · Type · Voice · Usage guidelines · 6–8 weeks</div>
-          </div>
-        </div>
-        <div class="scope-item">
-          <div class="scope-phase">Phase 3</div>
-          <div>
-            <div class="scope-title">Launch Campaign</div>
-            <div class="scope-detail">Concept · Hero content · Digital · OOH · PR · 8–10 weeks</div>
-          </div>
-        </div>
-        <div class="scope-item" style="border-left-color:var(--teal)">
-          <div class="scope-phase" style="color:var(--teal)">Retainer</div>
-          <div>
-            <div class="scope-title">Ongoing Brand Management</div>
-            <div class="scope-detail">Monthly strategy · Content · Media · Reporting · Flexible scope</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ghost-num" style="color:var(--magenta)">13</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">13 / 14</div></div>
-  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 04 — Commercial</div></div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SLIDE 14: THE ASK
-════════════════════════════════════════════ -->
-<section class="slide" id="s14" aria-label="The Ask">
-  <div class="dot-motif dot-motif-1"></div>
-  <div class="ask-inner">
-    <div class="ask-eyebrow reveal d1">Act 04 — The Ask</div>
-    <h2 class="ask-headline reveal d2">Bandar Tiram has<br>the land. We bring<br>the <span>story.</span></h2>
-    <p class="ask-sub reveal d3">One decision today: greenlight the discovery phase. Two weeks of audit and alignment. Then we present the brand directions in this room — and you choose the Bandar Tiram the world will know.</p>
-    <div class="ask-cta reveal d4">Let's Begin — chanleong@skribble.me</div>
-    <div class="ask-contact reveal d5">skribble.me &nbsp;·&nbsp; +60 — &nbsp;·&nbsp; Instagram / LinkedIn / TikTok @skribble</div>
+<section class="slide" id="s14" style="background:#1D3226;" aria-label="The Ask">
+  <div style="position:absolute;right:calc(-1*clamp(80px,10vw,150px));top:50%;transform:translateY(-50%);width:clamp(250px,45vw,550px);height:clamp(250px,45vw,550px);border-radius:50%;background:#2B4535;opacity:.2;filter:blur(clamp(50px,7vw,90px));pointer-events:none;z-index:0;"></div>
+  <div class="ask-inner" style="position:relative;z-index:1;">
+    <div class="ask-eyebrow reveal d1" style="color:#7A9B7F;">Act 04 — The Ask</div>
+    <h2 class="ask-headline reveal d2" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,5.5vw,4.5rem);letter-spacing:-.01em;">Era Tiram is<br>the brand Johor<br>has been <span style="color:#7A9B7F;font-style:italic;">waiting for.</span></h2>
+    <p class="ask-sub reveal d3" style="font-family:'Jost',sans-serif;font-weight:300;">One decision: greenlight the discovery phase. In two weeks we align, then present the refined direction in this room — and Era Tiram launches with a brand built to last a generation.</p>
+    <div class="ask-cta reveal d4" style="background:#2B4535;border:1px solid rgba(245,241,214,.2);border-radius:2px;font-family:'Jost',sans-serif;letter-spacing:.2em;">Let's Begin — chanleong@skribble.me</div>
+    <div class="ask-contact reveal d5" style="font-family:'Jost',sans-serif;">skribble.me &nbsp;·&nbsp; +60 — &nbsp;·&nbsp; Instagram / LinkedIn / TikTok @skribble</div>
   </div>
   <div class="chrome-top">
     <svg width="100" height="15" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1031,7 +1337,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
       <path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/>
       <path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/>
     </svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.35)">14 / 14</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.35)">28 / 28</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">End of Proposal</div>
