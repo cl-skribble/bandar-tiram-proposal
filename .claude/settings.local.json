@@ -2,7 +2,34 @@
   "permissions": {
     "allow": [
       "Bash(npm install *)",
-      "Bash(git clone *)"
+      "Bash(git clone *)",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(sed -i '' 's|/ 14|/ 15|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|14 / 15</div>|15 / 15</div>|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|13 / 15</div>|14 / 15</div>|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|12 / 15</div>|13 / 15</div>|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|11 / 15</div>|12 / 15</div>|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(python3 -c \"import PyPDF2; print\\('PyPDF2 available'\\)\")",
+      "Bash(python3 -c \"import pypdf; print\\('pypdf available'\\)\")",
+      "Bash(python3 -c \"import pdfplumber; print\\('pdfplumber available'\\)\")",
+      "Bash(brew list *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 *)",
+      "Bash(open *)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(pip3 list *)",
+      "Bash(brew install *)",
+      "Bash(pdftoppm -r 150 -png \"/Users/chanleongteng/Documents/Claude/Era Tiram Brand Presentation.pdf\" /tmp/era-tiram-pages/page)",
+      "Bash(mkdir -p /tmp/era-tiram-pages)",
+      "Bash(pdftoppm -r 120 -png \"/Users/chanleongteng/Documents/Claude/Era Tiram Brand Presentation.pdf\" /tmp/era-tiram-pages/page)",
+      "Read(//tmp/**)",
+      "Bash(sed -i '' 's|11 / 15|13 / 17|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|12 / 15|14 / 17|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|13 / 15|15 / 17|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|14 / 15|16 / 17|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|15 / 15|17 / 17|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's|16 / 17|27 / 28|g; s|17 / 17|28 / 28|g' /Users/chanleongteng/Documents/Claude/index.html)",
+      "Bash(sed -i '' 's| / 17| / 28|g' /Users/chanleongteng/Documents/Claude/index.html)"
     ]
   }
 }

@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Era Tiram — Brand Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap');
+
+  :root {
+    --forest:   #2B4535;
+    --forest-dk:#1D3226;
+    --cream:    #F5F1D6;
+    --ivory:    #F8F5ED;
+    --brown:    #3B2A1E;
+    --sand:     #C8BC9A;
+    --sage:     #7A9B7F;
+    --black:    #0A0A0A;
+    --white:    #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--ivory);
+    color: var(--black);
+    font-weight: 300;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 48px;
+    background: rgba(248,245,237,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(43,69,53,0.12);
+  }
+  nav .nav-logo { display: flex; align-items: center; gap: 12px; }
+  nav .nav-logo span {
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--forest); font-weight: 400;
+  }
+  nav ul { list-style: none; display: flex; gap: 36px; }
+  nav ul li a {
+    font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+    text-decoration: none; color: var(--forest); font-weight: 400;
+    opacity: 0.7; transition: opacity 0.2s;
+  }
+  nav ul li a:hover { opacity: 1; }
+
+  /* ── SECTIONS ── */
+  section { min-height: 100vh; }
+
+  /* ── COVER ── */
+  #cover {
+    background: var(--forest);
+    display: grid; grid-template-columns: 1fr 1fr;
+    position: relative; overflow: hidden;
+  }
+  #cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      0deg, transparent, transparent 119px,
+      rgba(245,241,214,0.04) 119px, rgba(245,241,214,0.04) 120px
+    ),
+    repeating-linear-gradient(
+      90deg, transparent, transparent 479px,
+      rgba(245,241,214,0.04) 479px, rgba(245,241,214,0.04) 480px
+    );
+  }
+  .cover-left {
+    padding: 120px 64px 80px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    position: relative; z-index: 1;
+    border-right: 1px solid rgba(245,241,214,0.15);
+  }
+  .cover-left .est {
+    font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.5; margin-bottom: 24px;
+  }
+  .cover-left h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 6vw, 88px);
+    font-weight: 300; line-height: 1.05;
+    color: var(--cream); letter-spacing: -0.01em;
+  }
+  .cover-left h1 em { font-style: italic; font-weight: 300; }
+  .cover-left .tagline {
+    margin-top: 32px;
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.55; font-weight: 400;
+  }
+  .cover-right {
+    display: flex; align-items: center; justify-content: center;
+    padding: 80px 48px;
+    position: relative; z-index: 1;
+  }
+
+  /* ── LOGOMARK SVG (recreated) ── */
+  .logomark-svg { width: 100%; max-width: 220px; }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    padding: 80px 80px 0;
+    display: flex; align-items: baseline; gap: 24px;
+    border-bottom: 1px solid rgba(43,69,53,0.12);
+    padding-bottom: 32px;
+  }
+  .section-header .section-num {
+    font-size: 10px; letter-spacing: 0.3em; color: var(--sage);
+    font-weight: 400; min-width: 40px;
+  }
+  .section-header h2 {
+    font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase;
+    font-weight: 500; color: var(--forest);
+  }
+
+  /* ── BRAND STORY ── */
+  #story { min-height: auto; background: var(--ivory); }
+  .story-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  }
+  .story-text {
+    padding: 80px 80px 80px;
+    border-right: 1px solid rgba(43,69,53,0.12);
+  }
+  .story-text .headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300; line-height: 1.15;
+    color: var(--forest-dk);
+    margin-bottom: 40px;
+  }
+  .story-text .headline em { font-style: italic; }
+  .story-text p {
+    font-size: 15px; line-height: 1.8; color: #3a3a3a;
+    margin-bottom: 20px; font-weight: 300;
+  }
+  .story-pillars {
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: center; gap: 40px;
+  }
+  .pillar-item { border-left: 2px solid var(--forest); padding-left: 24px; }
+  .pillar-item .p-label {
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--sage); font-weight: 500; margin-bottom: 6px;
+  }
+  .pillar-item .p-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px; font-weight: 600; color: var(--forest-dk);
+    margin-bottom: 8px;
+  }
+  .pillar-item .p-desc {
+    font-size: 13px; line-height: 1.7; color: #5a5a5a; font-weight: 300;
+  }
+
+  /* ── DESIGN DIRECTIONS ── */
+  #directions { min-height: auto; background: var(--forest); }
+  #directions .section-header { border-color: rgba(245,241,214,0.15); }
+  #directions .section-header .section-num { color: var(--cream); opacity: 0.4; }
+  #directions .section-header h2 { color: var(--cream); opacity: 0.7; }
+  .directions-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  }
+  .direction-card {
+    padding: 64px 80px;
+    border-right: 1px solid rgba(245,241,214,0.1);
+    border-bottom: 1px solid rgba(245,241,214,0.1);
+  }
+  .direction-card:nth-child(even) { border-right: none; }
+  .direction-card .d-num {
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.35; margin-bottom: 16px;
+  }
+  .direction-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; font-weight: 300; color: var(--cream);
+    line-height: 1.1; margin-bottom: 24px;
+  }
+  .direction-card h3 em { font-style: italic; }
+  .direction-card p {
+    font-size: 13px; line-height: 1.8; color: var(--cream);
+    opacity: 0.65; font-weight: 300; margin-bottom: 28px;
+  }
+  .d-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .d-tag {
+    font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+    border: 1px solid rgba(245,241,214,0.3); color: var(--cream);
+    padding: 5px 12px; font-weight: 400;
+  }
+
+  /* ── LOGO ── */
+  #logo { min-height: auto; background: var(--ivory); }
+  .logo-intro {
+    padding: 64px 80px 0;
+    display: grid; grid-template-columns: 1fr 2fr; gap: 80px;
+    align-items: start;
+  }
+  .logo-story .ls-label {
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--sage); margin-bottom: 16px;
+  }
+  .logo-story p {
+    font-size: 13px; line-height: 1.8; color: #4a4a4a; font-weight: 300;
+  }
+  .logo-anatomy {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  }
+  .anatomy-item { text-align: center; }
+  .anatomy-item .a-mark {
+    width: 80px; height: 80px; margin: 0 auto 12px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--ivory); border: 1px solid rgba(43,69,53,0.15);
+  }
+  .anatomy-item .a-label {
+    font-size: 10px; letter-spacing: 0.2em; color: #666; font-weight: 300;
+  }
+
+  .logo-suites {
+    padding: 64px 80px;
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 0;
+    border-top: 1px solid rgba(43,69,53,0.12);
+  }
+  .logo-suite-item {
+    padding: 48px; border-right: 1px solid rgba(43,69,53,0.1);
+    border-bottom: 1px solid rgba(43,69,53,0.1);
+    display: flex; flex-direction: column; align-items: flex-start; gap: 20px;
+  }
+  .logo-suite-item:nth-child(even) { border-right: none; }
+  .suite-label {
+    font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--sage); font-weight: 500;
+  }
+  .logo-lockup {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .logo-lockup-stacked {
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+    text-align: center;
+  }
+  .ll-wordmark {
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.35em; text-transform: uppercase;
+    font-weight: 300; font-size: 13px; color: var(--forest-dk);
+  }
+  .ll-wordmark.top { font-size: 10px; letter-spacing: 0.3em; margin-bottom: 4px; }
+  .ll-wordmark.bottom { font-size: 13px; letter-spacing: 0.4em; margin-top: 4px; }
+
+  /* ── COLORS ── */
+  #colors { min-height: auto; background: var(--forest-dk); }
+  #colors .section-header { border-color: rgba(245,241,214,0.12); }
+  #colors .section-header .section-num { color: rgba(245,241,214,0.4); }
+  #colors .section-header h2 { color: rgba(245,241,214,0.7); }
+  .colors-grid {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 0;
+    padding: 0;
+  }
+  .color-swatch {
+    aspect-ratio: 1; display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 20px; position: relative;
+    cursor: default;
+  }
+  .color-swatch .swatch-name {
+    font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+    font-weight: 500; margin-bottom: 4px;
+  }
+  .color-swatch .swatch-hex {
+    font-size: 11px; font-weight: 300; opacity: 0.7;
+    font-family: 'Courier New', monospace; letter-spacing: 0.05em;
+  }
+  .color-swatch .swatch-role {
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    opacity: 0.5; margin-top: 2px; font-weight: 300;
+  }
+  .color-info-row {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 0;
+    padding: 24px 0;
+    border-top: 1px solid rgba(245,241,214,0.08);
+  }
+  .color-detail {
+    padding: 24px 32px;
+    border-right: 1px solid rgba(245,241,214,0.08);
+  }
+  .color-detail:last-child { border-right: none; }
+  .cd-label {
+    font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: rgba(245,241,214,0.4); margin-bottom: 8px;
+  }
+  .cd-values {
+    font-size: 11px; color: rgba(245,241,214,0.7);
+    font-family: 'Courier New', monospace; line-height: 1.9;
+    font-weight: 300;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  #typography { min-height: auto; background: var(--ivory); }
+  .type-showcase {
+    padding: 64px 80px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  }
+  .type-col { border-right: 1px solid rgba(43,69,53,0.12); padding-right: 80px; }
+  .type-col:last-child { border-right: none; padding-right: 0; padding-left: 80px; }
+  .font-label {
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--sage); margin-bottom: 24px; font-weight: 500;
+  }
+  .type-specimen-large {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 300; line-height: 1.1; color: var(--forest-dk);
+    margin-bottom: 24px; letter-spacing: -0.02em;
+  }
+  .type-specimen-large em { font-style: italic; }
+  .type-specimen-sans {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 200; line-height: 1.1; color: var(--forest-dk);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .type-metadata {
+    font-size: 11px; color: #888; font-weight: 300;
+    line-height: 1.8; margin-bottom: 32px;
+  }
+  .type-scale {
+    display: flex; flex-direction: column; gap: 16px; margin-top: 32px;
+    padding-top: 32px; border-top: 1px solid rgba(43,69,53,0.1);
+  }
+  .type-scale-row {
+    display: flex; align-items: baseline; gap: 16px;
+  }
+  .ts-size {
+    font-size: 9px; letter-spacing: 0.2em; color: var(--sand);
+    min-width: 48px; font-weight: 400;
+  }
+  .ts-sample { color: var(--forest-dk); }
+
+  /* ── VOICE & MESSAGING ── */
+  #voice { min-height: auto; background: var(--forest); }
+  #voice .section-header { border-color: rgba(245,241,214,0.12); }
+  #voice .section-header .section-num { color: rgba(245,241,214,0.4); }
+  #voice .section-header h2 { color: rgba(245,241,214,0.7); }
+  .voice-inner {
+    padding: 64px 80px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  }
+  .voice-taglines { }
+  .vt-label {
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.4; margin-bottom: 32px;
+  }
+  .tagline-primary {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 300; color: var(--cream);
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .tagline-primary em { font-style: italic; }
+  .tagline-secondary {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 2.5vw, 36px);
+    font-weight: 300; color: var(--cream);
+    line-height: 1.2; margin-bottom: 32px; opacity: 0.7;
+  }
+  .tagline-secondary em { font-style: italic; }
+  .voice-attributes { }
+  .va-label {
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.4; margin-bottom: 32px;
+  }
+  .attr-list { list-style: none; }
+  .attr-list li {
+    padding: 16px 0; border-bottom: 1px solid rgba(245,241,214,0.1);
+    display: flex; gap: 20px; align-items: flex-start;
+  }
+  .attr-list li:first-child { border-top: 1px solid rgba(245,241,214,0.1); }
+  .attr-arrow {
+    color: var(--sage); font-size: 14px; padding-top: 1px; flex-shrink: 0;
+  }
+  .attr-content .attr-title {
+    font-size: 13px; font-weight: 500; color: var(--cream);
+    letter-spacing: 0.05em; margin-bottom: 4px;
+  }
+  .attr-content .attr-desc {
+    font-size: 12px; color: var(--cream); opacity: 0.55;
+    font-weight: 300; line-height: 1.6;
+  }
+
+  /* ── PRECINCTS ── */
+  #precincts { min-height: auto; background: var(--ivory); }
+  .precincts-grid {
+    padding: 64px 80px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  }
+  .precinct-card {
+    padding: 32px;
+    border-right: 1px solid rgba(43,69,53,0.1);
+    border-bottom: 1px solid rgba(43,69,53,0.1);
+  }
+  .precinct-card:nth-child(4n) { border-right: none; }
+  .precinct-card:nth-child(n+5) { border-bottom: none; }
+  .pc-logo-area { margin-bottom: 20px; }
+  .pc-era {
+    font-size: 9px; letter-spacing: 0.3em; color: var(--sage);
+    font-weight: 500; margin-bottom: 2px;
+  }
+  .pc-name {
+    font-size: 14px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--forest-dk); font-weight: 300;
+  }
+  .pc-desc {
+    font-size: 11px; line-height: 1.7; color: #666; font-weight: 300;
+  }
+
+  /* ── APPLICATIONS ── */
+  #applications { min-height: auto; background: var(--forest); }
+  #applications .section-header { border-color: rgba(245,241,214,0.12); }
+  #applications .section-header .section-num { color: rgba(245,241,214,0.4); }
+  #applications .section-header h2 { color: rgba(245,241,214,0.7); }
+  .app-grid {
+    padding: 64px 80px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .app-card {
+    padding: 40px; background: rgba(245,241,214,0.05);
+    border: 1px solid rgba(245,241,214,0.1);
+  }
+  .app-icon { font-size: 24px; margin-bottom: 16px; opacity: 0.6; }
+  .app-title {
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.5; margin-bottom: 12px; font-weight: 500;
+  }
+  .app-example {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 300; color: var(--cream);
+    line-height: 1.4;
+  }
+  .app-note {
+    margin-top: 12px; font-size: 11px; color: var(--cream);
+    opacity: 0.4; font-weight: 300; line-height: 1.6;
+  }
+
+  /* ── USAGE RULES ── */
+  #rules { min-height: auto; background: var(--ivory); }
+  .rules-grid {
+    padding: 64px 80px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  }
+  .rule-group {
+    padding: 0 0 48px; border-bottom: 1px solid rgba(43,69,53,0.1);
+    margin-bottom: 48px;
+  }
+  .rule-group:last-child { border-bottom: none; margin-bottom: 0; }
+  .rg-heading {
+    font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--forest); font-weight: 500; margin-bottom: 20px;
+  }
+  .rule-list { list-style: none; }
+  .rule-list li {
+    padding: 10px 0; border-bottom: 1px solid rgba(43,69,53,0.07);
+    font-size: 13px; color: #4a4a4a; font-weight: 300; line-height: 1.6;
+    display: flex; gap: 12px;
+  }
+  .rule-list li:first-child { padding-top: 0; }
+  .rule-icon { color: var(--sage); font-size: 12px; flex-shrink: 0; padding-top: 2px; }
+  .rule-icon.no { color: #c0392b; }
+
+  .rules-col { padding: 0 80px 0 0; }
+  .rules-col:last-child { padding: 0 0 0 80px; border-left: 1px solid rgba(43,69,53,0.1); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--forest-dk); padding: 64px 80px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  footer .f-left { }
+  footer .f-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px; font-weight: 300; color: var(--cream);
+    letter-spacing: 0.05em; margin-bottom: 8px;
+  }
+  footer .f-brand em { font-style: italic; }
+  footer .f-sub {
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.4;
+  }
+  footer .f-right {
+    text-align: right;
+    font-size: 10px; letter-spacing: 0.25em; color: var(--cream);
+    opacity: 0.35; line-height: 2;
+  }
+  footer .f-right a { color: inherit; text-decoration: none; }
+
+  /* Responsive tweaks */
+  @media (max-width: 900px) {
+    #cover, .story-inner, .type-showcase, .voice-inner, .rules-grid { grid-template-columns: 1fr; }
+    .logo-anatomy { grid-template-columns: repeat(2,1fr); }
+    .precincts-grid { grid-template-columns: repeat(2,1fr); }
+    .colors-grid, .color-info-row { grid-template-columns: repeat(3,1fr); }
+    .logo-suites { grid-template-columns: 1fr; }
+    .app-grid { grid-template-columns: 1fr; }
+    nav ul { display: none; }
+    .section-header, .story-text, .story-pillars, .type-showcase,
+    .logo-intro, .logo-suites, .precincts-grid, .app-grid, .voice-inner,
+    .rules-grid, .directions-grid { padding: 40px; }
+    .cover-left { padding: 100px 40px 60px; }
+    footer { flex-direction: column; gap: 32px; align-items: flex-start; }
+    .rules-col, .rules-col:last-child { padding: 0; border: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <rect width="24" height="24" fill="#2B4535" rx="2"/>
+      <path d="M4 4h16v2H4zM4 11h16v2H4zM4 18h16v2H4z" fill="#F5F1D6" opacity="0.6"/>
+      <path d="M8 4v16M16 4v16" stroke="#F5F1D6" stroke-width="1.5" stroke-opacity="0.4"/>
+    </svg>
+    <span>Era Tiram — Brand Guide</span>
+  </div>
+  <ul>
+    <li><a href="#story">Brand</a></li>
+    <li><a href="#logo">Logo</a></li>
+    <li><a href="#colors">Colours</a></li>
+    <li><a href="#typography">Typography</a></li>
+    <li><a href="#precincts">Precincts</a></li>
+    <li><a href="#rules">Usage</a></li>
+  </ul>
+</nav>
+
+
+<!-- COVER -->
+<section id="cover">
+  <div class="cover-left">
+    <div class="est">Est. 2026 &nbsp;—&nbsp; By JLand</div>
+    <h1>Era<br><em>Tiram</em></h1>
+    <div class="tagline">Brand Identity Guide &nbsp;·&nbsp; Davinci Studio</div>
+  </div>
+  <div class="cover-right">
+    <!-- Logomark SVG — reconstructed from the brand presentation -->
+    <svg class="logomark-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer frame bands (top) -->
+      <rect x="10" y="10" width="180" height="18" fill="#F5F1D6"/>
+      <rect x="10" y="34" width="180" height="10" fill="#F5F1D6"/>
+      <!-- Outer frame bands (bottom) -->
+      <rect x="10" y="166" width="180" height="10" fill="#F5F1D6"/>
+      <rect x="10" y="182" width="180" height="18" fill="#F5F1D6"/>
+      <!-- Vertical trunk -->
+      <rect x="93" y="44" width="14" height="122" fill="#F5F1D6"/>
+      <!-- Top crossbar (T-bar) -->
+      <rect x="10" y="44" width="180" height="14" fill="#F5F1D6"/>
+      <!-- Left branches -->
+      <path d="M93 80 Q60 70 30 55" stroke="#F5F1D6" stroke-width="12" stroke-linecap="round"/>
+      <path d="M93 100 Q55 90 22 85" stroke="#F5F1D6" stroke-width="12" stroke-linecap="round"/>
+      <path d="M93 120 Q60 130 30 145" stroke="#F5F1D6" stroke-width="12" stroke-linecap="round"/>
+      <!-- Right branches -->
+      <path d="M107 80 Q140 70 170 55" stroke="#F5F1D6" stroke-width="12" stroke-linecap="round"/>
+      <path d="M107 100 Q145 90 178 85" stroke="#F5F1D6" stroke-width="12" stroke-linecap="round"/>
+      <path d="M107 120 Q140 130 170 145" stroke="#F5F1D6" stroke-width="12" stroke-linecap="round"/>
+      <!-- Leaf shapes (negative space suggestion) -->
+      <ellipse cx="55" cy="75" rx="12" ry="7" fill="#2B4535" transform="rotate(-20 55 75)"/>
+      <ellipse cx="145" cy="75" rx="12" ry="7" fill="#2B4535" transform="rotate(20 145 75)"/>
+      <ellipse cx="45" cy="100" rx="10" ry="6" fill="#2B4535"/>
+      <ellipse cx="155" cy="100" rx="10" ry="6" fill="#2B4535"/>
+      <ellipse cx="55" cy="130" rx="12" ry="7" fill="#2B4535" transform="rotate(20 55 130)"/>
+      <ellipse cx="145" cy="130" rx="12" ry="7" fill="#2B4535" transform="rotate(-20 145 130)"/>
+      <!-- Wordmark below -->
+      <text x="100" y="212" font-family="'Jost', sans-serif" font-size="9" font-weight="300"
+            fill="#F5F1D6" fill-opacity="0.7" text-anchor="middle" letter-spacing="6">E R A &nbsp; T I R A M</text>
+    </svg>
+  </div>
+</section>
+
+
+<!-- BRAND STORY -->
+<section id="story">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2>Brand Identity &amp; Direction</h2>
+  </div>
+  <div class="story-inner">
+    <div class="story-text">
+      <div class="headline">The <em>Synthesis</em><br>of Eras.</div>
+      <p>Era Tiram is a landmark township development by JLand (Johor Land Group), conceived as a new urban standard that merges the region's cultural heritage with forward-looking, human-centred design.</p>
+      <p>The brand draws its identity from two converging forces: the deep-rooted heritage of the Tiram district, and a bold vision for modern living that places human experience at its foundation. The result is a township that does not merely build — it cultivates.</p>
+      <p>Era Tiram is positioned not as another property development, but as a living ecosystem — a synthesis of community, nature, culture, and infrastructure, designed around the anatomy of how people truly live.</p>
+    </div>
+    <div class="story-pillars">
+      <div class="pillar-item">
+        <div class="p-label">Pillar 01</div>
+        <div class="p-title">Modern Heritage</div>
+        <div class="p-desc">Not erasing the past, but elevating it to build the future. Contemporary living is merged with historic roots to create an ultimate modern lifestyle right within the city limits.</div>
+      </div>
+      <div class="pillar-item">
+        <div class="p-label">Pillar 02</div>
+        <div class="p-title">Human-Centred</div>
+        <div class="p-desc">Every design decision is inspired by the human form and how communities move, gather, and thrive. The city's foundational pillars mirror the anatomy of daily living.</div>
+      </div>
+      <div class="pillar-item">
+        <div class="p-label">Pillar 03</div>
+        <div class="p-title">Clean Modernism</div>
+        <div class="p-desc">A culturally iconic environment built on sustainable, minimal principles. The new urban standard for Johor — functional, refined, and responsible.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DESIGN DIRECTIONS -->
+<section id="directions">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2>Design Directions</h2>
+  </div>
+  <div class="directions-grid">
+    <div class="direction-card">
+      <div class="d-num">Direction 01</div>
+      <h3>Modern<br><em>Heritage</em></h3>
+      <p>A visual world that honours Tiram's cultural and natural heritage — familiar, warm, and richly textured — while expressing it through a rigorously contemporary lens. Earthy palettes, botanical motifs, and artisan craft sensibilities brought into a modern framework.</p>
+      <div class="d-tags">
+        <span class="d-tag">Familiar</span>
+        <span class="d-tag">Cultural</span>
+        <span class="d-tag">Human-Centred</span>
+      </div>
+    </div>
+    <div class="direction-card">
+      <div class="d-num">Direction 02</div>
+      <h3>Clean<br><em>Modernism</em></h3>
+      <p>An iconic, forward-facing visual language rooted in the principles of sustainable minimalism. Inspired by the human body's systems — clean lines, precise geometry, and an honest material palette that communicates progress without excess.</p>
+      <div class="d-tags">
+        <span class="d-tag">Sustainable</span>
+        <span class="d-tag">Modern</span>
+        <span class="d-tag">Minimalist</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LOGO SYSTEM -->
+<section id="logo">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2>Logo System</h2>
+  </div>
+
+  <div class="logo-intro">
+    <div class="logo-story">
+      <div class="ls-label">The Logomark</div>
+      <p>The Era Tiram mark is a geometric seal constructed from four interlocking ideas: the branching pattern of human bloodflow, the letter <strong>E</strong> for "Era," the letter <strong>T</strong> for "Tiram," and a leaf motif symbolising sustainability and growth.</p>
+      <br>
+      <p>The resulting form reads simultaneously as a tree canopy, a cultural weave, and a bold typographic ligature — anchoring the brand in both nature and place.</p>
+    </div>
+    <div class="logo-anatomy">
+      <div class="anatomy-item">
+        <div class="a-mark">
+          <!-- Blood/branch pattern -->
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="4" y="4" width="40" height="40" rx="1" fill="#f0ede4"/>
+            <rect x="4" y="4" width="40" height="4" fill="#1D3226"/>
+            <rect x="4" y="40" width="40" height="4" fill="#1D3226"/>
+            <rect x="22" y="8" width="4" height="32" fill="#1D3226"/>
+            <line x1="22" y1="18" x2="8" y2="12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+            <line x1="26" y1="18" x2="40" y2="12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+            <line x1="22" y1="28" x2="8" y2="34" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+            <line x1="26" y1="28" x2="40" y2="34" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="a-label">Bloodflow</div>
+      </div>
+      <div class="anatomy-item">
+        <div class="a-mark">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="4" y="4" width="40" height="40" rx="1" fill="#f0ede4"/>
+            <rect x="12" y="8" width="4" height="32" fill="#1D3226"/>
+            <rect x="12" y="8" width="22" height="4" fill="#1D3226"/>
+            <rect x="12" y="22" width="18" height="4" fill="#1D3226"/>
+            <rect x="12" y="36" width="22" height="4" fill="#1D3226"/>
+          </svg>
+        </div>
+        <div class="a-label">E for Era</div>
+      </div>
+      <div class="anatomy-item">
+        <div class="a-mark">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="4" y="4" width="40" height="40" rx="1" fill="#f0ede4"/>
+            <rect x="8" y="8" width="32" height="4" fill="#1D3226"/>
+            <rect x="22" y="12" width="4" height="28" fill="#1D3226"/>
+          </svg>
+        </div>
+        <div class="a-label">T for Tiram</div>
+      </div>
+      <div class="anatomy-item">
+        <div class="a-mark">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="4" y="4" width="40" height="40" rx="1" fill="#f0ede4"/>
+            <ellipse cx="16" cy="18" rx="6" ry="4" fill="#1D3226" transform="rotate(-15 16 18)"/>
+            <ellipse cx="32" cy="18" rx="6" ry="4" fill="#1D3226" transform="rotate(15 32 18)"/>
+            <ellipse cx="16" cy="30" rx="6" ry="4" fill="#1D3226" transform="rotate(15 16 30)"/>
+            <ellipse cx="32" cy="30" rx="6" ry="4" fill="#1D3226" transform="rotate(-15 32 30)"/>
+          </svg>
+        </div>
+        <div class="a-label">Leaf / Growth</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo Suites -->
+  <div class="logo-suites">
+    <div class="logo-suite-item">
+      <div class="suite-label">Primary — Stacked</div>
+      <div class="logo-lockup-stacked">
+        <div class="ll-wordmark top">E R A</div>
+        <svg width="48" height="52" viewBox="0 0 48 52" fill="none">
+          <rect x="0" y="0" width="48" height="4" fill="#1D3226"/>
+          <rect x="0" y="6" width="48" height="3" fill="#1D3226"/>
+          <rect x="0" y="43" width="48" height="3" fill="#1D3226"/>
+          <rect x="0" y="48" width="48" height="4" fill="#1D3226"/>
+          <rect x="22" y="9" width="4" height="34" fill="#1D3226"/>
+          <rect x="0" y="9" width="48" height="3.5" fill="#1D3226"/>
+          <path d="M22 20 Q12 17 4 12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 20 Q36 17 44 12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 31 Q12 34 4 39" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 31 Q36 34 44 39" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="ll-wordmark bottom">T I R A M</div>
+      </div>
+    </div>
+
+    <div class="logo-suite-item">
+      <div class="suite-label">With Establishment Date</div>
+      <div class="logo-lockup-stacked" style="position:relative;">
+        <div class="ll-wordmark top">E R A</div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:8px; letter-spacing:0.2em; color:#7A9B7F; font-family:'Jost',sans-serif; font-weight:300;">EST</span>
+          <svg width="40" height="44" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#1D3226"/>
+            <rect x="0" y="6" width="48" height="3" fill="#1D3226"/>
+            <rect x="0" y="43" width="48" height="3" fill="#1D3226"/>
+            <rect x="0" y="48" width="48" height="4" fill="#1D3226"/>
+            <rect x="22" y="9" width="4" height="34" fill="#1D3226"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#1D3226"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span style="font-size:8px; letter-spacing:0.2em; color:#7A9B7F; font-family:'Jost',sans-serif; font-weight:300;">2026</span>
+        </div>
+        <div class="ll-wordmark bottom">T I R A M</div>
+      </div>
+    </div>
+
+    <div class="logo-suite-item">
+      <div class="suite-label">Horizontal</div>
+      <div class="logo-lockup">
+        <svg width="44" height="48" viewBox="0 0 48 52" fill="none">
+          <rect x="0" y="0" width="48" height="4" fill="#1D3226"/>
+          <rect x="0" y="6" width="48" height="3" fill="#1D3226"/>
+          <rect x="0" y="43" width="48" height="3" fill="#1D3226"/>
+          <rect x="0" y="48" width="48" height="4" fill="#1D3226"/>
+          <rect x="22" y="9" width="4" height="34" fill="#1D3226"/>
+          <rect x="0" y="9" width="48" height="3.5" fill="#1D3226"/>
+          <path d="M22 20 Q12 17 4 12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 20 Q36 17 44 12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 31 Q12 34 4 39" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 31 Q36 34 44 39" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div class="ll-wordmark" style="font-size:10px; letter-spacing:0.25em; margin-bottom:4px;">E R A</div>
+          <div class="ll-wordmark" style="font-size:13px; letter-spacing:0.35em;">T I R A M</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-suite-item">
+      <div class="suite-label">Logotype — Full Name</div>
+      <div class="ll-wordmark" style="font-size: 18px; letter-spacing: 0.4em; margin-top: 12px;">E R A T I R A M</div>
+    </div>
+  </div>
+
+  <!-- Green versions -->
+  <div style="background:#F8F5ED; padding:40px 80px; border-top: 1px solid rgba(43,69,53,0.1);">
+    <div style="font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:#7A9B7F; margin-bottom:32px;">Brand Colour Application</div>
+    <div style="display:flex; gap:64px; align-items:center;">
+      <!-- Dark bg version -->
+      <div style="background:#2B4535; padding:32px 40px; display:flex; flex-direction:column; align-items:center; gap:6px; min-width:160px;">
+        <div style="font-size:8px; letter-spacing:0.3em; color:#F5F1D6; font-family:'Jost',sans-serif;">E R A</div>
+        <svg width="44" height="48" viewBox="0 0 48 52" fill="none">
+          <rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/>
+          <rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/>
+          <rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/>
+          <rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/>
+          <rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/>
+          <rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/>
+          <path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size:11px; letter-spacing:0.4em; color:#F5F1D6; font-family:'Jost',sans-serif; font-weight:300;">T I R A M</div>
+      </div>
+      <!-- Light bg version -->
+      <div style="background:#F8F5ED; padding:32px 40px; display:flex; flex-direction:column; align-items:center; gap:6px; min-width:160px; border:1px solid rgba(43,69,53,0.1);">
+        <div style="font-size:8px; letter-spacing:0.3em; color:#1D3226; font-family:'Jost',sans-serif;">E R A</div>
+        <svg width="44" height="48" viewBox="0 0 48 52" fill="none">
+          <rect x="0" y="0" width="48" height="4" fill="#1D3226"/>
+          <rect x="0" y="6" width="48" height="3" fill="#1D3226"/>
+          <rect x="0" y="43" width="48" height="3" fill="#1D3226"/>
+          <rect x="0" y="48" width="48" height="4" fill="#1D3226"/>
+          <rect x="22" y="9" width="4" height="34" fill="#1D3226"/>
+          <rect x="0" y="9" width="48" height="3.5" fill="#1D3226"/>
+          <path d="M22 20 Q12 17 4 12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 20 Q36 17 44 12" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 31 Q12 34 4 39" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 31 Q36 34 44 39" stroke="#1D3226" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size:11px; letter-spacing:0.4em; color:#1D3226; font-family:'Jost',sans-serif; font-weight:300;">T I R A M</div>
+      </div>
+      <!-- Dark brown version -->
+      <div style="background:#3B2A1E; padding:32px 40px; display:flex; flex-direction:column; align-items:center; gap:6px; min-width:160px;">
+        <div style="font-size:8px; letter-spacing:0.3em; color:#F5F1D6; font-family:'Jost',sans-serif;">E R A</div>
+        <svg width="44" height="48" viewBox="0 0 48 52" fill="none">
+          <rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/>
+          <rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/>
+          <rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/>
+          <rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/>
+          <rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/>
+          <rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/>
+          <path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size:11px; letter-spacing:0.4em; color:#F5F1D6; font-family:'Jost',sans-serif; font-weight:300;">T I R A M</div>
+      </div>
+      <div style="font-size:12px; color:#888; font-weight:300; line-height:1.8; max-width:260px; font-family:'Jost',sans-serif;">
+        The logo is used in three approved colourways:<br>
+        <strong style="color:#2B4535; font-weight:500;">Forest Green</strong> on ivory (primary),<br>
+        <strong style="color:#1D3226; font-weight:500;">Deep Forest</strong> on white (digital),<br>
+        <strong style="color:#F5F1D6; font-weight:500;">Cream</strong> on dark (reversed).
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- COLOURS -->
+<section id="colors">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2>Colour Palette</h2>
+  </div>
+  <div class="colors-grid">
+    <div class="color-swatch" style="background:#2B4535; color:#F5F1D6;">
+      <div class="swatch-name">Forest</div>
+      <div class="swatch-hex">#2B4535</div>
+      <div class="swatch-role">Primary</div>
+    </div>
+    <div class="color-swatch" style="background:#1D3226; color:#F5F1D6;">
+      <div class="swatch-name">Deep Forest</div>
+      <div class="swatch-hex">#1D3226</div>
+      <div class="swatch-role">Primary Dark</div>
+    </div>
+    <div class="color-swatch" style="background:#F5F1D6; color:#2B4535;">
+      <div class="swatch-name">Cream</div>
+      <div class="swatch-hex">#F5F1D6</div>
+      <div class="swatch-role">Secondary</div>
+    </div>
+    <div class="color-swatch" style="background:#F8F5ED; color:#2B4535;">
+      <div class="swatch-name">Ivory</div>
+      <div class="swatch-hex">#F8F5ED</div>
+      <div class="swatch-role">Background</div>
+    </div>
+    <div class="color-swatch" style="background:#7A9B7F; color:#F8F5ED;">
+      <div class="swatch-name">Sage</div>
+      <div class="swatch-hex">#7A9B7F</div>
+      <div class="swatch-role">Accent</div>
+    </div>
+    <div class="color-swatch" style="background:#3B2A1E; color:#F5F1D6;">
+      <div class="swatch-name">Dark Brown</div>
+      <div class="swatch-hex">#3B2A1E</div>
+      <div class="swatch-role">Wayfinding</div>
+    </div>
+  </div>
+  <div class="color-info-row">
+    <div class="color-detail">
+      <div class="cd-label">Forest</div>
+      <div class="cd-values">
+        HEX #2B4535<br>
+        RGB 43 · 69 · 53<br>
+        CMYK 38 · 0 · 23 · 73<br>
+        Pantone 350 C
+      </div>
+    </div>
+    <div class="color-detail">
+      <div class="cd-label">Deep Forest</div>
+      <div class="cd-values">
+        HEX #1D3226<br>
+        RGB 29 · 50 · 38<br>
+        CMYK 42 · 0 · 24 · 80<br>
+        Pantone 357 C
+      </div>
+    </div>
+    <div class="color-detail">
+      <div class="cd-label">Cream</div>
+      <div class="cd-values">
+        HEX #F5F1D6<br>
+        RGB 245 · 241 · 214<br>
+        CMYK 0 · 2 · 13 · 4<br>
+        Pantone 9182 C
+      </div>
+    </div>
+    <div class="color-detail">
+      <div class="cd-label">Ivory</div>
+      <div class="cd-values">
+        HEX #F8F5ED<br>
+        RGB 248 · 245 · 237<br>
+        CMYK 0 · 1 · 5 · 3<br>
+        Pantone 9182 C (lt)
+      </div>
+    </div>
+    <div class="color-detail">
+      <div class="cd-label">Sage</div>
+      <div class="cd-values">
+        HEX #7A9B7F<br>
+        RGB 122 · 155 · 127<br>
+        CMYK 21 · 0 · 18 · 39<br>
+        Pantone 7477 C
+      </div>
+    </div>
+    <div class="color-detail">
+      <div class="cd-label">Dark Brown</div>
+      <div class="cd-values">
+        HEX #3B2A1E<br>
+        RGB 59 · 42 · 30<br>
+        CMYK 0 · 29 · 49 · 77<br>
+        Pantone 4625 C
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TYPOGRAPHY -->
+<section id="typography">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2>Typography</h2>
+  </div>
+  <div class="type-showcase">
+    <div class="type-col">
+      <div class="font-label">Primary Typeface — Display</div>
+      <div class="type-specimen-large">The<br><em>Anatomy</em><br>of Living.</div>
+      <div class="type-metadata">
+        Cormorant Garamond<br>
+        Weights: Light 300 · Regular 400 · SemiBold 600<br>
+        Styles: Roman · Italic<br>
+        Use: Headlines, Pull Quotes, Section Titles
+      </div>
+      <div class="type-scale">
+        <div class="type-scale-row">
+          <span class="ts-size">72px</span>
+          <span class="ts-sample" style="font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:300; color:#1D3226;">Display Hero</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="ts-size">48px</span>
+          <span class="ts-sample" style="font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:300; color:#1D3226;">Section Heading</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="ts-size">32px</span>
+          <span class="ts-sample" style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:400; color:#1D3226;">Subheading</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="ts-size">24px</span>
+          <span class="ts-sample" style="font-family:'Cormorant Garamond',serif; font-size:14px; font-style:italic; color:#1D3226; font-weight:300;">Pull Quote Italic</span>
+        </div>
+      </div>
+    </div>
+    <div class="type-col">
+      <div class="font-label">Secondary Typeface — Body &amp; UI</div>
+      <div class="type-specimen-sans">Era Tiram</div>
+      <div class="type-metadata">
+        Jost (or geometric alternative: Futura PT, Gill Sans)<br>
+        Weights: ExtraLight 200 · Light 300 · Regular 400 · Medium 500<br>
+        Styles: Uppercase with wide tracking for headings<br>
+        Use: Body Copy, Labels, Navigation, UI, Captions
+      </div>
+      <div class="type-scale">
+        <div class="type-scale-row">
+          <span class="ts-size">14px</span>
+          <span class="ts-sample" style="font-size:14px; font-weight:300; color:#1D3226; letter-spacing:0.01em;">Body copy — long-form descriptions and narratives</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="ts-size">12px</span>
+          <span class="ts-sample" style="font-size:12px; font-weight:300; color:#555;">Captions, supporting text, footnotes</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="ts-size">10px</span>
+          <span class="ts-sample" style="font-size:10px; letter-spacing:0.3em; text-transform:uppercase; font-weight:500; color:#2B4535;">SECTION LABELS · METADATA</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="ts-size">9px</span>
+          <span class="ts-sample" style="font-size:9px; letter-spacing:0.4em; text-transform:uppercase; font-weight:400; color:#7A9B7F;">TAGS · CATEGORIES · FINE PRINT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- VOICE & MESSAGING -->
+<section id="voice">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2>Voice &amp; Messaging</h2>
+  </div>
+  <div class="voice-inner">
+    <div class="voice-taglines">
+      <div class="vt-label">Core Taglines</div>
+      <div class="tagline-primary">"The Anatomy<br>of <em>Living.</em>"</div>
+      <div class="tagline-secondary">"The Synthesis<br>of <em>Eras.</em>"</div>
+      <div class="tagline-secondary" style="font-size:24px;">"A New Way<br>of <em>Living.</em>"</div>
+    </div>
+    <div class="voice-attributes">
+      <div class="va-label">Brand Voice Attributes</div>
+      <ul class="attr-list">
+        <li>
+          <span class="attr-arrow">→</span>
+          <div class="attr-content">
+            <div class="attr-title">Considered</div>
+            <div class="attr-desc">Purposeful language. Every word earns its place. No hyperbole, no filler. The brand speaks only when it has something real to say.</div>
+          </div>
+        </li>
+        <li>
+          <span class="attr-arrow">→</span>
+          <div class="attr-content">
+            <div class="attr-title">Rooted</div>
+            <div class="attr-desc">Anchored in place, culture, and community. References to Tiram's heritage feel organic, not performative.</div>
+          </div>
+        </li>
+        <li>
+          <span class="attr-arrow">→</span>
+          <div class="attr-content">
+            <div class="attr-title">Forward</div>
+            <div class="attr-desc">Optimistic about the future without being blind to the present. The brand invites — it does not sell.</div>
+          </div>
+        </li>
+        <li>
+          <span class="attr-arrow">→</span>
+          <div class="attr-content">
+            <div class="attr-title">Human</div>
+            <div class="attr-desc">Warm, accessible, and grounded. Speaks to real people and their real lives, not abstract lifestyle aspirations.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRECINCTS -->
+<section id="precincts">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <h2>Precinct Sub-Brand System</h2>
+  </div>
+  <div style="padding:32px 80px 0; font-size:13px; color:#666; font-weight:300; line-height:1.7; max-width:640px;">
+    Each precinct within Era Tiram carries its own identity under the master brand. The same logomark is used with the precinct name set in tracked uppercase below — inheriting the forest green colourway.
+  </div>
+  <div class="precincts-grid">
+    <div class="precinct-card">
+      <div class="pc-logo-area">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <svg width="28" height="30" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+            <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+            <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="pc-era">E R A</div>
+            <div class="pc-name">H U B</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-desc">Integrated transportation node and key pedestrian corridor — the connective tissue of the township.</div>
+    </div>
+    <div class="precinct-card">
+      <div class="pc-logo-area">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <svg width="28" height="30" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+            <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+            <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="pc-era">E R A</div>
+            <div class="pc-name">V A L L E Y</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-desc">Inclusive recreational amenities for community-centred living, embracing the natural landscape.</div>
+    </div>
+    <div class="precinct-card">
+      <div class="pc-logo-area">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <svg width="28" height="30" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+            <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+            <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="pc-era">E R A</div>
+            <div class="pc-name">S O U T H H I L L S</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-desc">High-density residential precinct built on the elevated southern terrain with unique natural backing.</div>
+    </div>
+    <div class="precinct-card">
+      <div class="pc-logo-area">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <svg width="28" height="30" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+            <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+            <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="pc-era">E R A</div>
+            <div class="pc-name">C E N T R A L</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-desc">The heart of the township — a locally relevant, walkable neighbourhood with civic and retail life.</div>
+    </div>
+    <div class="precinct-card">
+      <div class="pc-logo-area">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <svg width="28" height="30" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+            <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+            <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="pc-era">E R A</div>
+            <div class="pc-name">G A T E W A Y</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-desc">The arrival experience — a welcome node anchored by commercial and interactive retail destinations.</div>
+    </div>
+    <div class="precinct-card">
+      <div class="pc-logo-area">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <svg width="28" height="30" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+            <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+            <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="pc-era">E R A</div>
+            <div class="pc-name">R I D G E W A Y</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-desc">Residential neighbourhood settled within the treeline — serene, canopy-framed living.</div>
+    </div>
+    <div class="precinct-card">
+      <div class="pc-logo-area">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <svg width="28" height="30" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+            <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+            <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="pc-era">E R A</div>
+            <div class="pc-name">W E S T W O O D</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-desc">Western residential district offering a quieter, wooded residential character within the township.</div>
+    </div>
+    <div class="precinct-card">
+      <div class="pc-logo-area">
+        <div style="display:flex; gap:10px; align-items:center;">
+          <svg width="28" height="30" viewBox="0 0 48 52" fill="none">
+            <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+            <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+            <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+            <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+            <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+            <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="pc-era">E R A</div>
+            <div class="pc-name">E A S T W O O D</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-desc">Eastern edge precinct — where the township meets its natural boundary and city connections.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- APPLICATIONS -->
+<section id="applications">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <h2>Brand Applications</h2>
+  </div>
+  <div class="app-grid">
+    <div class="app-card">
+      <div class="app-icon">⬛</div>
+      <div class="app-title">Exterior Hoarding</div>
+      <div class="app-example">Logo centred on forest green background. Tagline set in light-weight Cormorant below.</div>
+      <div class="app-note">Minimum clear space = 1× logomark height on all sides. White logo on dark ground only.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">◫</div>
+      <div class="app-title">Wayfinding / Signage</div>
+      <div class="app-example">Dark brown (#3B2A1E) pylon with cream logo. Directional text in Jost Light, tracked.</div>
+      <div class="app-note">Precinct name appears below master logo in matching tracked uppercase style.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">◻</div>
+      <div class="app-title">Stationery</div>
+      <div class="app-example">Business cards: ivory stock, forest green logo. Reverse: green ground, cream type.</div>
+      <div class="app-note">Font: Jost Light for contact information. Generous white space throughout.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">⬚</div>
+      <div class="app-title">Uniforms &amp; PPE</div>
+      <div class="app-example">Forest green jacket/shirt with cream logomark embroidered on chest. White hardhat with full logo lockup.</div>
+      <div class="app-note">Embroidery: cream thread on green. Hardhat: full colour print or deboss.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">◱</div>
+      <div class="app-title">Merchandise</div>
+      <div class="app-example">Tote bags, notebooks, umbrellas: forest green base with cream logomark. Minimal decoration — logo is the hero.</div>
+      <div class="app-note">Tote: 100% cotton, natural or forest green. Screen print preferred.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">▣</div>
+      <div class="app-title">Digital Screens</div>
+      <div class="app-example">Sales gallery displays and digital OOH: full-bleed photography with logo overlaid in cream. Tagline in Cormorant Italic.</div>
+      <div class="app-note">Minimum digital logo size: 120px height. Ensure contrast ratio ≥ 4.5:1.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- USAGE RULES -->
+<section id="rules">
+  <div class="section-header">
+    <span class="section-num">09</span>
+    <h2>Logo Usage Rules</h2>
+  </div>
+  <div class="rules-grid">
+    <div class="rules-col">
+      <div class="rule-group">
+        <div class="rg-heading">Clear Space</div>
+        <ul class="rule-list">
+          <li><span class="rule-icon">✓</span>Maintain a minimum clear space equal to the height of the "E" in "ERA" on all four sides of the logo.</li>
+          <li><span class="rule-icon">✓</span>On outdoor formats, double the clear space minimum.</li>
+          <li><span class="rule-icon">✓</span>The logomark alone (without wordmark) may be used at minimum 32px / 8mm.</li>
+        </ul>
+      </div>
+      <div class="rule-group">
+        <div class="rg-heading">Approved Backgrounds</div>
+        <ul class="rule-list">
+          <li><span class="rule-icon">✓</span>Ivory (#F8F5ED) — preferred background for print collateral.</li>
+          <li><span class="rule-icon">✓</span>Forest Green (#2B4535) — primary brand background.</li>
+          <li><span class="rule-icon">✓</span>Dark Brown (#3B2A1E) — wayfinding and environmental signage.</li>
+          <li><span class="rule-icon">✓</span>White (#FFFFFF) — digital use only.</li>
+          <li><span class="rule-icon">✓</span>Full-bleed photography — use cream reversed logo at sufficient contrast.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rules-col">
+      <div class="rule-group">
+        <div class="rg-heading">Never Do</div>
+        <ul class="rule-list">
+          <li><span class="rule-icon no">✗</span>Do not stretch or distort the logo in any dimension.</li>
+          <li><span class="rule-icon no">✗</span>Do not rotate the logo.</li>
+          <li><span class="rule-icon no">✗</span>Do not apply drop shadows, gradients, or outlines to the logomark.</li>
+          <li><span class="rule-icon no">✗</span>Do not place the logo on busy photographic backgrounds without sufficient contrast overlay.</li>
+          <li><span class="rule-icon no">✗</span>Do not change the logo colours to anything outside the approved palette.</li>
+          <li><span class="rule-icon no">✗</span>Do not separate the wordmark letters from their approved spacing.</li>
+          <li><span class="rule-icon no">✗</span>Do not use the precinct sub-brand logos independently as master brand.</li>
+        </ul>
+      </div>
+      <div class="rule-group">
+        <div class="rg-heading">Minimum Sizes</div>
+        <ul class="rule-list">
+          <li><span class="rule-icon">✓</span>Print — full lockup: 25mm width minimum.</li>
+          <li><span class="rule-icon">✓</span>Digital — full lockup: 120px width minimum.</li>
+          <li><span class="rule-icon">✓</span>Logomark only (no wordmark): 16mm / 80px minimum.</li>
+          <li><span class="rule-icon">✓</span>Embroidery: 20mm width minimum.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-left">
+    <div class="f-brand"><em>Era</em> Tiram</div>
+    <div class="f-sub">By JLand &nbsp;·&nbsp; Est. 2026 &nbsp;·&nbsp; Brand Identity by Davinci Studio</div>
+  </div>
+  <div class="f-right">
+    Brand Guide — Version 1.0<br>
+    April 2026<br>
+    <a href="http://www.davincistudio.my">www.davincistudio.my</a>
+  </div>
+</footer>
+
+</body>
+</html>
