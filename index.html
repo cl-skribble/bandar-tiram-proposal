@@ -587,6 +587,97 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   .mb-images { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
 }
 
+/* ════════════════════════════════════════════
+   BRAND PLATFORM SLIDES — sct0–sct5
+════════════════════════════════════════════ */
+#sct0 { background: #1D3226 !important; }
+#sct1 { background: #F8F5ED !important; }
+#sct2 { background: #2B4535 !important; }
+#sct3 { background: #1D3226 !important; }
+#sct4 { background: #F8F5ED !important; }
+#sct5 { background: #2B4535 !important; }
+
+/* sct1 — Four Pillars grid */
+#sct1 .pillar-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:0; flex:1;
+}
+.pillar-card {
+  padding:clamp(1.5rem,3vw,2.5rem);
+  display:flex; flex-direction:column; justify-content:space-between;
+  border-right:1px solid rgba(245,241,214,.12);
+  border-bottom:1px solid rgba(245,241,214,.12);
+}
+.pillar-card:nth-child(even) { border-right:none; }
+.pillar-card:nth-child(n+3) { border-bottom:none; }
+.pillar-num {
+  font-family:'Jost',sans-serif; font-size:var(--label-size);
+  letter-spacing:.35em; text-transform:uppercase; color:#7A9B7F; margin-bottom:4px;
+}
+.pillar-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,4vw,3rem); font-weight:300; line-height:1.05;
+  margin-bottom:clamp(.5rem,1vh,.8rem);
+}
+.pillar-desc {
+  font-family:'Jost',sans-serif; font-size:var(--small-size);
+  font-weight:300; line-height:1.7;
+}
+
+/* sct2 — Tier list (Connected) */
+.tier-list { display:flex; flex-direction:column; gap:clamp(.5rem,1vh,.8rem); }
+.tier-item {
+  display:flex; align-items:flex-start; gap:clamp(.8rem,1.5vw,1.2rem);
+  padding:clamp(.6rem,1.2vh,.9rem) clamp(.8rem,1.5vw,1.2rem);
+  border-left:2px solid rgba(122,155,127,.4); background:rgba(245,241,214,.04);
+}
+.tier-badge {
+  font-family:'Jost',sans-serif; font-size:var(--label-size);
+  font-weight:500; letter-spacing:.15em; text-transform:uppercase;
+  color:#7A9B7F; white-space:nowrap; flex-shrink:0;
+  min-width:clamp(70px,8vw,100px);
+}
+.tier-desc {
+  font-family:'Jost',sans-serif; font-size:var(--small-size);
+  font-weight:300; color:#F5F1D6; opacity:.6; line-height:1.5;
+}
+
+/* sct4 — DNA translation table (Rooted) */
+.dna-table { width:100%; border-collapse:collapse; }
+.dna-table tr { border-bottom:1px solid rgba(43,69,53,.08); }
+.dna-table tr:last-child { border-bottom:none; }
+.dna-old {
+  font-family:'Cormorant Garamond',serif; font-size:clamp(.9rem,1.8vw,1.2rem);
+  font-weight:400; color:#5a3a1e;
+  padding:clamp(.5rem,1vh,.8rem) clamp(.8rem,1.5vw,1.2rem) clamp(.5rem,1vh,.8rem) 0;
+  width:45%;
+}
+.dna-arrow { color:#7A9B7F; font-size:14px; padding:0 clamp(.4rem,.8vw,.6rem); opacity:.6; }
+.dna-new {
+  font-family:'Jost',sans-serif; font-size:var(--small-size);
+  font-weight:400; color:#1D3226; padding:clamp(.5rem,1vh,.8rem) 0;
+}
+.dna-new strong { font-weight:600; }
+
+/* sct5 — Housing spectrum + lifecycle (Equitable) */
+.housing-spectrum { display:flex; flex-direction:column; gap:clamp(.4rem,.8vh,.6rem); margin-bottom:clamp(.8rem,1.5vh,1.2rem); }
+.hs-item { display:flex; align-items:center; gap:clamp(.6rem,1.2vw,1rem); }
+.hs-bar { height:4px; border-radius:2px; flex-shrink:0; }
+.hs-label { font-family:'Jost',sans-serif; font-size:var(--small-size); color:#F5F1D6; font-weight:300; }
+.hs-price { font-family:'Jost',sans-serif; font-size:var(--label-size); color:#7A9B7F; font-weight:500; margin-left:auto; white-space:nowrap; }
+.lifecycle-arc { display:flex; gap:0; margin-top:clamp(.6rem,1.2vh,1rem); }
+.lc-stage {
+  flex:1; padding:clamp(.5rem,1vh,.8rem) clamp(.6rem,1.2vw,.9rem);
+  border-left:1px solid rgba(245,241,214,.12); font-family:'Jost',sans-serif;
+}
+.lc-stage:first-child { border-left:none; }
+.lc-title { font-size:var(--label-size); font-weight:500; color:#F5F1D6; margin-bottom:2px; }
+.lc-sub { font-size:clamp(.5rem,.6vw,.6rem); letter-spacing:.1em; color:#F5F1D6; opacity:.4; font-weight:300; line-height:1.5; }
+
+@media (max-width:900px) {
+  #sct1 .pillar-grid { grid-template-columns:1fr; }
+  .lifecycle-arc { flex-direction:column; }
+}
+
 </style>
 </head>
 <body>
@@ -619,7 +710,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
       <path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/>
       <path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/>
     </svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.35)">01 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.35)">01 / 38</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Introduction</div>
@@ -663,7 +754,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <div class="ghost-num" style="color:var(--magenta)">01</div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="#242424"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="#242424"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="#242424"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="#242424"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="#242424"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="#242424"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="#242424"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="#242424"/></svg>
-    <div class="slide-counter" style="color:#aaa">02 / 28</div>
+    <div class="slide-counter" style="color:#aaa">02 / 38</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:#aaa">Act 01 — Context</div>
@@ -696,7 +787,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <div class="ghost-num" style="color:rgba(255,255,255,.05)">02</div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">03 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">03 / 38</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 01 — Context</div>
@@ -740,7 +831,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   </div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="#242424"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="#242424"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="#242424"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="#242424"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="#242424"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="#242424"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="#242424"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="#242424"/></svg>
-    <div class="slide-counter" style="color:#aaa">04 / 28</div>
+    <div class="slide-counter" style="color:#aaa">04 / 38</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 01 — Context</div></div>
 </section>
@@ -757,7 +848,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   </div>
   <div class="chrome-top">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.25)">05 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.25)">05 / 38</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:rgba(255,255,255,.2)">Act 01 — Context</div>
@@ -810,7 +901,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   </div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">06 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">06 / 38</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 02 — Strategy</div></div>
 </section>
@@ -829,9 +920,637 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   </div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="rgba(255,255,255,0.5)"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="rgba(255,255,255,0.6)"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="rgba(255,255,255,0.6)"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="rgba(255,255,255,0.6)"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="rgba(255,255,255,0.6)"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="rgba(255,255,255,0.6)"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="rgba(255,255,255,0.6)"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="rgba(255,255,255,0.6)"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="rgba(255,255,255,0.6)"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.35)">07 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.35)">07 / 38</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 02 — Strategy</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE sct0 (08/34): A CITY THAT LIVES — MASTER CONCEPT
+════════════════════════════════════════════ -->
+<section class="slide" id="sct0" aria-label="A City That Lives — Master Concept">
+  <div style="position:absolute;right:calc(-1*clamp(80px,12vw,180px));top:50%;transform:translateY(-50%);width:clamp(300px,55vw,700px);height:clamp(300px,55vw,700px);border-radius:50%;background:#2B4535;opacity:.2;filter:blur(clamp(60px,9vw,130px));pointer-events:none;z-index:0;"></div>
+  <div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:clamp(4rem,8vh,6rem) var(--side-pad) clamp(3rem,6vh,5rem);position:relative;z-index:1;">
+    <div class="et-lbl et-lbl-cream reveal d1">Act 03 — Brand Platform · The Concept</div>
+    <div class="reveal d2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(4.5rem,12vw,10rem);font-weight:300;line-height:.88;color:#F5F1D6;letter-spacing:-.02em;margin-bottom:clamp(1.2rem,2.5vh,2rem);">A City<br><em style="font-style:italic;">That Lives.</em></div>
+    <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--h3-size);font-weight:300;color:#F5F1D6;opacity:.5;max-width:540px;line-height:1.7;">Not a collection of products. A single living system — where water, nature, movement, and community are all part of the same thing.</p>
+    <div class="reveal d4" style="margin-top:clamp(1.5rem,3vh,2.5rem);display:flex;gap:clamp(2rem,4vw,3rem);flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:600;color:#7A9B7F;">Connected</div>
+        <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#F5F1D6;opacity:.3;letter-spacing:.2em;margin-top:2px;">01</div>
+      </div>
+      <div style="width:1px;background:rgba(245,241,214,.1);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:600;color:#7A9B7F;">Regenerative</div>
+        <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#F5F1D6;opacity:.3;letter-spacing:.2em;margin-top:2px;">02</div>
+      </div>
+      <div style="width:1px;background:rgba(245,241,214,.1);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:600;color:#7A9B7F;">Rooted</div>
+        <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#F5F1D6;opacity:.3;letter-spacing:.2em;margin-top:2px;">03</div>
+      </div>
+      <div style="width:1px;background:rgba(245,241,214,.1);"></div>
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:600;color:#7A9B7F;">Equitable</div>
+        <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#F5F1D6;opacity:.3;letter-spacing:.2em;margin-top:2px;">04</div>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-top">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">08 / 38</div>
+  </div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Platform</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE sct1 (09/34): FOUR PILLARS OVERVIEW
+════════════════════════════════════════════ -->
+<section class="slide" id="sct1" aria-label="Four Pillars Overview" style="display:flex;flex-direction:column;">
+  <div class="reveal" style="padding:clamp(1rem,2.2vh,2rem) var(--side-pad) 0;flex-shrink:0;">
+    <div class="et-lbl" style="margin-bottom:4px;">Act 03 — Brand Platform · Four Pillars</div>
+    <h2 class="h2" style="color:#1D3226;margin-bottom:0;">Four pillars. One living city.</h2>
+  </div>
+  <div class="pillar-grid reveal d2" style="flex:1;">
+    <!-- 01 Connected -->
+    <div class="pillar-card" style="background:#2B4535;">
+      <div>
+        <div class="pillar-num">01</div>
+        <div class="pillar-name" style="color:#F5F1D6;">Connected</div>
+        <div class="pillar-desc" style="color:#F5F1D6;opacity:.6;">Five movement modes. One continuous green spine. The car is a guest — every other way of moving gets priority infrastructure.</div>
+      </div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;text-transform:uppercase;color:#7A9B7F;margin-top:clamp(.8rem,1.5vh,1.2rem);">25km network · 3km green connector</div>
+    </div>
+    <!-- 02 Regenerative -->
+    <div class="pillar-card" style="background:#1D3226;">
+      <div>
+        <div class="pillar-num">02</div>
+        <div class="pillar-name" style="color:#F5F1D6;">Regenerative</div>
+        <div class="pillar-desc" style="color:#F5F1D6;opacity:.6;">Water, food, and energy cycle within the township — nothing is wasted. The systems you can't see make the city work. The ones you can make it beautiful.</div>
+      </div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;text-transform:uppercase;color:#7A9B7F;margin-top:clamp(.8rem,1.5vh,1.2rem);">5-Diamond LCCF · 45% carbon reduction</div>
+    </div>
+    <!-- 03 Rooted -->
+    <div class="pillar-card" style="background:#F5EDE4;">
+      <div>
+        <div class="pillar-num" style="color:#8B5A2B;">03</div>
+        <div class="pillar-name" style="color:#3B2A1E;">Rooted</div>
+        <div class="pillar-desc" style="color:#5a3a1e;">Kampung spatial DNA, translated into modern urban form. Laman Budaya. Kebun Orchards. The traditional Pekan, rebuilt for the next 50 years.</div>
+      </div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;text-transform:uppercase;color:#8B5A2B;margin-top:clamp(.8rem,1.5vh,1.2rem);">Laman Budaya · Kebun Orchards</div>
+    </div>
+    <!-- 04 Equitable -->
+    <div class="pillar-card" style="background:#7A9B7F;">
+      <div>
+        <div class="pillar-num" style="color:rgba(245,241,214,.5);">04</div>
+        <div class="pillar-name" style="color:#F5F1D6;">Equitable</div>
+        <div class="pillar-desc" style="color:#F5F1D6;opacity:.8;">RM50,000 to RM550,000+. Same park. Same school. Same community. Mixed-income, fully integrated — same block, same plot, same neighbourhood.</div>
+      </div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,214,.7);margin-top:clamp(.8rem,1.5vh,1.2rem);">8,878 units · all incomes · all life stages</div>
+    </div>
+  </div>
+  <div class="chrome-top" style="z-index:11"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">09 / 38</div></div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — Brand Platform</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE sct2 (10/34): PILLAR 01 — CONNECTED
+════════════════════════════════════════════ -->
+<section class="slide" id="sct2" aria-label="Pillar 01 — Connected">
+  <div class="slide-content">
+    <div class="et-lbl et-lbl-cream reveal d1">Act 03 — Brand Platform · Pillar 01</div>
+    <div class="two-col">
+      <div>
+        <div class="reveal d2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:300;line-height:1.0;color:#F5F1D6;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Connected.</div>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#F5F1D6;opacity:.55;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Era Tiram is the only Johor township designed for five movement modes — each with dedicated infrastructure. The car is a guest, not the host.</p>
+        <blockquote class="reveal d4" style="font-family:'Cormorant Garamond',serif;font-size:clamp(.95rem,1.8vw,1.3rem);font-style:italic;font-weight:300;color:#F5F1D6;opacity:.45;border-left:2px solid #7A9B7F;padding-left:clamp(.8rem,1.5vw,1.2rem);line-height:1.6;margin:0 0 clamp(.8rem,1.5vh,1.2rem);">"Blurred lines between public and private spaces — everywhere is pedestrian friendly and accessible."</blockquote>
+        <div class="reveal d5" style="display:flex;gap:clamp(1rem,2vw,1.5rem);flex-wrap:wrap;">
+          <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#7A9B7F;">25km network</div>
+          <div style="color:rgba(245,241,214,.2);">·</div>
+          <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#7A9B7F;">3km green connector</div>
+          <div style="color:rgba(245,241,214,.2);">·</div>
+          <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);color:#7A9B7F;">10-min walk to nearest commercial</div>
+        </div>
+      </div>
+      <div class="reveal d3">
+        <div class="tier-list">
+          <div class="tier-item">
+            <div class="tier-badge">On Foot</div>
+            <div class="tier-desc">Pocket parks every 5 minutes. Back-lane treatment turns rear lanes into landscaped shared community spaces. Entire township pedestrian-first.</div>
+          </div>
+          <div class="tier-item">
+            <div class="tier-badge">By Bike</div>
+            <div class="tier-desc">25km dedicated network on both road right-of-way and green reserve. Continuous from precinct to precinct.</div>
+          </div>
+          <div class="tier-item">
+            <div class="tier-badge">By Buggy</div>
+            <div class="tier-desc">Localised buggy service connecting premium residential precincts — shortcutting through green corridors.</div>
+          </div>
+          <div class="tier-item">
+            <div class="tier-badge">By Bus</div>
+            <div class="tier-desc">All mixed-income homes within 450m of a feeder bus stop. Designed in from day one, not retrofitted.</div>
+          </div>
+          <div class="tier-item" style="border-left-color:rgba(122,155,127,.15);">
+            <div class="tier-badge" style="color:rgba(122,155,127,.45);">By Car</div>
+            <div class="tier-desc" style="opacity:.4;">Loop system with no direct housing entries from primary roads. Traffic flows; neighbourhoods breathe.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ghost-num" style="color:rgba(245,241,214,.04)">01</div>
+  <div class="chrome-top">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">10 / 38</div>
+  </div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Platform · Connected</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     KEY VISUAL: CONNECTED
+════════════════════════════════════════════ -->
+<section class="slide" id="sct2v" aria-label="Key Visual — Connected" style="background:#2B4535;overflow:hidden;display:flex;align-items:stretch;">
+  <!-- Background: subtle grid suggesting road network -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="216" x2="1920" y2="216" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <line x1="0" y1="432" x2="1920" y2="432" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <line x1="0" y1="648" x2="1920" y2="648" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <line x1="0" y1="864" x2="1920" y2="864" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <line x1="384" y1="0" x2="384" y2="1080" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <line x1="768" y1="0" x2="768" y2="1080" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <line x1="1152" y1="0" x2="1152" y2="1080" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <line x1="1536" y1="0" x2="1536" y2="1080" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <!-- Organic green spine curves -->
+    <path d="M0,540 C400,300 800,700 1200,400 S1700,600 1920,480" stroke="#7A9B7F" stroke-width="2.5" opacity=".35" fill="none"/>
+    <path d="M0,620 C350,450 700,750 1100,500 S1600,680 1920,560" stroke="#7A9B7F" stroke-width="1.5" opacity=".2" fill="none"/>
+    <path d="M0,460 C450,250 900,650 1300,380 S1750,520 1920,420" stroke="#7A9B7F" stroke-width="1" opacity=".15" fill="none"/>
+  </svg>
+
+  <!-- Left: Typography -->
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(3rem,6vw,7rem);position:relative;z-index:2;border-right:1px solid rgba(245,241,214,.08);">
+    <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.4em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Pillar 01</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,9vw,7.5rem);font-weight:300;line-height:.88;color:#F5F1D6;letter-spacing:-.02em;margin-bottom:clamp(1.5rem,3vh,2.5rem);">Con<br>nected.</div>
+    <div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;color:#F5F1D6;opacity:.45;line-height:1.8;max-width:360px;margin-bottom:clamp(2rem,4vh,3.5rem);">Five speeds. One continuous green spine. The car is a guest — every other way of moving gets dedicated infrastructure.</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;color:#7A9B7F;">25km pedestrian &amp; cycling network</div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;color:#7A9B7F;">3km park &amp; green connector</div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;color:#7A9B7F;">10-min walk to nearest commercial</div>
+    </div>
+  </div>
+
+  <!-- Right: Logomark + 5 radiating movement mode arcs -->
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;">
+    <svg viewBox="0 0 480 480" style="width:min(42vw,420px);height:min(42vw,420px);" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer ring -->
+      <circle cx="240" cy="240" r="220" stroke="#F5F1D6" stroke-width="0.5" opacity=".15"/>
+      <circle cx="240" cy="240" r="170" stroke="#7A9B7F" stroke-width="0.5" opacity=".2"/>
+      <!-- 5 spokes — movement modes -->
+      <!-- On Foot (top) -->
+      <line x1="240" y1="90" x2="240" y2="190" stroke="#F5F1D6" stroke-width="1.5" opacity=".5"/>
+      <circle cx="240" cy="86" r="4" fill="#7A9B7F"/>
+      <text x="240" y="72" font-family="Jost,sans-serif" font-size="13" fill="#F5F1D6" fill-opacity=".6" text-anchor="middle" letter-spacing="2">ON FOOT</text>
+      <!-- By Bike (upper-right) -->
+      <line x1="347" y1="133" x2="282" y2="198" stroke="#F5F1D6" stroke-width="1.5" opacity=".5"/>
+      <circle cx="351" cy="129" r="4" fill="#7A9B7F"/>
+      <text x="390" y="120" font-family="Jost,sans-serif" font-size="13" fill="#F5F1D6" fill-opacity=".6" text-anchor="start" letter-spacing="2">BY BIKE</text>
+      <!-- By Buggy (lower-right) -->
+      <line x1="347" y1="347" x2="282" y2="282" stroke="#F5F1D6" stroke-width="1.5" opacity=".5"/>
+      <circle cx="351" cy="351" r="4" fill="#7A9B7F"/>
+      <text x="362" y="370" font-family="Jost,sans-serif" font-size="13" fill="#F5F1D6" fill-opacity=".6" text-anchor="start" letter-spacing="2">BY BUGGY</text>
+      <!-- By Bus (lower-left) -->
+      <line x1="133" y1="347" x2="198" y2="282" stroke="#F5F1D6" stroke-width="1.5" opacity=".3"/>
+      <circle cx="129" cy="351" r="4" fill="#7A9B7F" opacity=".4"/>
+      <text x="118" y="370" font-family="Jost,sans-serif" font-size="13" fill="#F5F1D6" fill-opacity=".35" text-anchor="end" letter-spacing="2">BY BUS</text>
+      <!-- By Car (upper-left) — deliberately dimmed -->
+      <line x1="133" y1="133" x2="198" y2="198" stroke="#F5F1D6" stroke-width="1" opacity=".15"/>
+      <circle cx="129" cy="129" r="3" fill="#F5F1D6" opacity=".15"/>
+      <text x="118" y="120" font-family="Jost,sans-serif" font-size="11" fill="#F5F1D6" fill-opacity=".18" text-anchor="end" letter-spacing="2">BY CAR</text>
+      <!-- Central Era Tiram mark -->
+      <g transform="translate(216,214)">
+        <rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/>
+        <rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/>
+        <rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/>
+        <rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/>
+        <rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/>
+        <rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/>
+        <path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+        <path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+        <path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+        <path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="chrome-top" style="position:absolute;top:0;left:0;right:0;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.25)">11 / 38</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;bottom:0;left:0;right:0;">
+    <div class="act-tag" style="color:rgba(255,255,255,.2)">Act 03 — Brand Platform · Key Visual</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE sct3 (11/34): PILLAR 02 — REGENERATIVE
+════════════════════════════════════════════ -->
+<section class="slide" id="sct3" aria-label="Pillar 02 — Regenerative">
+  <div class="slide-content">
+    <div class="et-lbl et-lbl-cream reveal d1">Act 03 — Brand Platform · Pillar 02</div>
+    <div class="two-col">
+      <div>
+        <div class="reveal d2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:300;line-height:1.0;color:#F5F1D6;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Regenerative.</div>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#F5F1D6;opacity:.55;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Era Tiram doesn't consume its environment — it regenerates it. Every resource that enters the township cycles back through it. Nothing is wasted, including the water, the food, or the community.</p>
+        <div class="reveal d4" style="background:rgba(122,155,127,.15);border:1px solid rgba(122,155,127,.3);padding:clamp(.8rem,1.5vh,1.2rem) clamp(1rem,2vw,1.5rem);margin-bottom:clamp(.6rem,1.2vh,1rem);">
+          <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.3em;text-transform:uppercase;color:#7A9B7F;margin-bottom:6px;">5-Diamond LCCF 2030</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.8vw,2rem);font-weight:300;color:#F5F1D6;">45% carbon reduction<br>from baseline by 2030.</div>
+        </div>
+        <p class="reveal d5" style="font-family:'Jost',sans-serif;font-size:var(--small-size);font-weight:300;color:#F5F1D6;opacity:.35;line-height:1.6;">Waste to Wealth: only 5% of township waste reaches landfill. The rest becomes compost, energy, or raw materials — circling back into the community.</p>
+      </div>
+      <div class="reveal d3" style="display:flex;flex-direction:column;gap:clamp(.6rem,1.2vh,1rem);">
+        <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.3em;text-transform:uppercase;color:#7A9B7F;margin-bottom:4px;">The Four Cycles</div>
+        <div class="tier-item">
+          <div class="tier-badge">Water</div>
+          <div class="tier-desc">Rain → roof harvesting → bioswale → detention pond → natural irrigation → back to rain. The Education &amp; Innovation Walk follows every step.</div>
+        </div>
+        <div class="tier-item">
+          <div class="tier-badge">Food</div>
+          <div class="tier-desc">Urban Farm rooftop → Bazaar → food waste → community composting → Kebun Orchards → harvest → Bazaar. Farm-to-table at township scale.</div>
+        </div>
+        <div class="tier-item">
+          <div class="tier-badge">Carbon</div>
+          <div class="tier-desc">Solar PV on every home + natural ventilation design → reduced grid load → 56,280 native trees → 0.2°C microclimate cooling → LCCF certification.</div>
+        </div>
+        <div class="tier-item">
+          <div class="tier-badge">Community</div>
+          <div class="tier-desc">Young Entrepreneur → First Home Owner → Lifetime Home Owner — the same person, the same township, ageing in place without ageing out.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ghost-num" style="color:rgba(245,241,214,.04)">02</div>
+  <div class="chrome-top">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">12 / 38</div>
+  </div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Platform · Regenerative</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     KEY VISUAL: REGENERATIVE
+════════════════════════════════════════════ -->
+<section class="slide" id="sct3v" aria-label="Key Visual — Regenerative" style="background:#1D3226;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+  <!-- Background texture: faint radial rings -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" fill="none">
+    <circle cx="960" cy="540" r="520" stroke="#F5F1D6" stroke-width="0.5" opacity=".04"/>
+    <circle cx="960" cy="540" r="420" stroke="#F5F1D6" stroke-width="0.5" opacity=".06"/>
+    <circle cx="960" cy="540" r="320" stroke="#F5F1D6" stroke-width="0.5" opacity=".08"/>
+    <circle cx="960" cy="540" r="220" stroke="#F5F1D6" stroke-width="0.5" opacity=".1"/>
+  </svg>
+
+  <!-- Left: Typography -->
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(3rem,6vw,7rem);position:relative;z-index:2;max-width:50%;">
+    <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.4em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Pillar 02</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,9vw,7.5rem);font-weight:300;line-height:.88;color:#F5F1D6;letter-spacing:-.02em;margin-bottom:clamp(1.5rem,3vh,2.5rem);">Regen<br><em style="font-style:italic;">erative.</em></div>
+    <div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;color:#F5F1D6;opacity:.45;line-height:1.8;max-width:360px;margin-bottom:clamp(1.5rem,3vh,2.5rem);">Every resource that enters Era Tiram cycles back through it. Water, food, carbon, and community — all in closed loop.</div>
+    <div style="background:rgba(122,155,127,.12);border:1px solid rgba(122,155,127,.25);padding:clamp(.6rem,1.2vh,1rem) clamp(.8rem,1.5vw,1.2rem);">
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.25em;text-transform:uppercase;color:#7A9B7F;margin-bottom:4px;">5-Diamond LCCF 2030</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-weight:300;color:#F5F1D6;">45% carbon reduction · Only 5% to landfill</div>
+    </div>
+  </div>
+
+  <!-- Right: 4-cycle concentric ring diagram -->
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;">
+    <svg viewBox="0 0 480 480" style="width:min(42vw,400px);height:min(42vw,400px);" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer ring: Community -->
+      <circle cx="240" cy="240" r="210" stroke="#F5F1D6" stroke-width="1" opacity=".2"/>
+      <!-- Ring 2: Carbon -->
+      <circle cx="240" cy="240" r="165" stroke="#7A9B7F" stroke-width="1.5" opacity=".35"/>
+      <!-- Ring 3: Food -->
+      <circle cx="240" cy="240" r="120" stroke="#F5F1D6" stroke-width="1" opacity=".25"/>
+      <!-- Ring 4 / inner: Water -->
+      <circle cx="240" cy="240" r="78" stroke="#7A9B7F" stroke-width="2" opacity=".5"/>
+
+      <!-- 4 cycle labels at compass points -->
+      <!-- Top: Water -->
+      <text x="240" y="148" font-family="Cormorant Garamond,serif" font-size="16" font-weight="300" fill="#7A9B7F" text-anchor="middle" letter-spacing="1">Water</text>
+      <text x="240" y="164" font-family="Jost,sans-serif" font-size="9" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="2">RAIN → BIOSWALE → POND</text>
+
+      <!-- Right: Food -->
+      <text x="352" y="244" font-family="Cormorant Garamond,serif" font-size="16" font-weight="300" fill="#7A9B7F" text-anchor="middle" letter-spacing="1">Food</text>
+      <text x="352" y="258" font-family="Jost,sans-serif" font-size="9" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="2">FARM → TABLE</text>
+
+      <!-- Bottom: Carbon -->
+      <text x="240" y="328" font-family="Cormorant Garamond,serif" font-size="16" font-weight="300" fill="#7A9B7F" text-anchor="middle" letter-spacing="1">Carbon</text>
+      <text x="240" y="342" font-family="Jost,sans-serif" font-size="9" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="2">SOLAR → LCCF 5D</text>
+
+      <!-- Left: Community -->
+      <text x="128" y="244" font-family="Cormorant Garamond,serif" font-size="16" font-weight="300" fill="#7A9B7F" text-anchor="middle" letter-spacing="1">Community</text>
+      <text x="128" y="258" font-family="Jost,sans-serif" font-size="9" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="2">YOUNG → LIFETIME</text>
+
+      <!-- Flow arrows on outer ring at 45° increments -->
+      <path d="M240,30 L248,44 L232,44 Z" fill="#7A9B7F" opacity=".5"/>
+      <path d="M450,240 L436,248 L436,232 Z" fill="#7A9B7F" opacity=".35"/>
+      <path d="M240,450 L232,436 L248,436 Z" fill="#7A9B7F" opacity=".35"/>
+      <path d="M30,240 L44,232 L44,248 Z" fill="#7A9B7F" opacity=".35"/>
+
+      <!-- Central Era Tiram mark -->
+      <g transform="translate(216,214)">
+        <rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/>
+        <rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/>
+        <rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/>
+        <rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/>
+        <rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/>
+        <rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/>
+        <path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+        <path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+        <path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+        <path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="chrome-top" style="position:absolute;top:0;left:0;right:0;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.25)">13 / 38</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;bottom:0;left:0;right:0;">
+    <div class="act-tag" style="color:rgba(255,255,255,.2)">Act 03 — Brand Platform · Key Visual</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE sct4 (12/34): PILLAR 03 — ROOTED
+════════════════════════════════════════════ -->
+<section class="slide" id="sct4" aria-label="Pillar 03 — Rooted">
+  <div class="slide-content">
+    <div class="et-lbl reveal d1">Act 03 — Brand Platform · Pillar 03</div>
+    <div class="two-col">
+      <div>
+        <div class="reveal d2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:300;line-height:1.0;color:#1D3226;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Rooted.</div>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#444;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">The kampung wasn't inefficient. It was a 15-minute city 500 years before the term existed. Era Tiram rebuilds that spatial logic in contemporary form — with modern infrastructure, without erasing the soul.</p>
+        <blockquote class="reveal d4" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-style:italic;font-weight:300;color:#2B4535;border-left:2px solid #7A9B7F;padding-left:clamp(.8rem,1.5vw,1.2rem);line-height:1.65;margin:0 0 clamp(.8rem,1.5vh,1.2rem);">"The kampung wasn't inefficient.<br>It was ahead of its time."</blockquote>
+        <div class="reveal d5" style="display:flex;flex-direction:column;gap:6px;">
+          <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.25em;text-transform:uppercase;color:#7A9B7F;">Signature anchors</div>
+          <div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:400;color:#1D3226;">Laman Budaya <span style="font-weight:300;color:#888;">— traditional games, dance, Johorean cultural courtyards</span></div>
+          <div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:400;color:#1D3226;">Kebun Orchards <span style="font-weight:300;color:#888;">— nurseries, greenhouses, community food production</span></div>
+        </div>
+      </div>
+      <div class="reveal d3">
+        <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.25em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Kampung DNA → Era Tiram</div>
+        <table class="dna-table">
+          <tr>
+            <td class="dna-old">Anjung Rumah<br><span style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#888;font-weight:300;font-style:normal;">Welcome Porch</span></td>
+            <td class="dna-arrow">→</td>
+            <td class="dna-new">The Plazas — welcoming gateways at every precinct entry</td>
+          </tr>
+          <tr>
+            <td class="dna-old">Laman Rumah<br><span style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#888;font-weight:300;font-style:normal;">Family Yard</span></td>
+            <td class="dna-arrow">→</td>
+            <td class="dna-new">Playgrounds + Neighbourhood Parks — outdoor play and nature engagement</td>
+          </tr>
+          <tr>
+            <td class="dna-old">Selang Rumah<br><span style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#888;font-weight:300;font-style:normal;">Between-house zone</span></td>
+            <td class="dna-arrow">→</td>
+            <td class="dna-new">Back Lane Treatment — landscaped shared lanes as community connectors</td>
+          </tr>
+          <tr>
+            <td class="dna-old">Kebun<br><span style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#888;font-weight:300;font-style:normal;">Garden / Orchard</span></td>
+            <td class="dna-arrow">→</td>
+            <td class="dna-new"><strong>Kebun Orchards</strong> — nurseries, greenhouses, community food</td>
+          </tr>
+          <tr>
+            <td class="dna-old">Padang Budaya<br><span style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#888;font-weight:300;font-style:normal;">Cultural Ground</span></td>
+            <td class="dna-arrow">→</td>
+            <td class="dna-new"><strong>Laman Budaya</strong> — traditional games, dance, Johorean cultural courtyards</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="ghost-num" style="color:rgba(43,69,53,.05)">03</div>
+  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">14 / 38</div></div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — Brand Platform · Rooted</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     KEY VISUAL: ROOTED
+════════════════════════════════════════════ -->
+<section class="slide" id="sct4v" aria-label="Key Visual — Rooted" style="background:#F5EDE4;overflow:hidden;display:flex;align-items:stretch;">
+  <!-- Background: subtle woven lattice pattern (traditional Malay motif) -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" fill="none">
+    <!-- Diagonal weave lines — suggesting traditional Malay lattice/songket -->
+    <line x1="0" y1="0" x2="1920" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".06"/>
+    <line x1="192" y1="0" x2="1920" y2="888" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="384" y1="0" x2="1920" y2="696" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="576" y1="0" x2="1920" y2="504" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="768" y1="0" x2="1920" y2="312" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="960" y1="0" x2="1920" y2="120" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="0" y1="192" x2="1728" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="0" y1="384" x2="1536" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="0" y1="576" x2="1344" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="0" y1="768" x2="1152" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <!-- Counter-diagonal -->
+    <line x1="1920" y1="0" x2="0" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".06"/>
+    <line x1="1728" y1="0" x2="0" y2="888" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="1536" y1="0" x2="0" y2="696" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="1344" y1="0" x2="0" y2="504" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="1920" y1="192" x2="192" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="1920" y1="384" x2="384" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+    <line x1="1920" y1="576" x2="576" y2="1080" stroke="#2B4535" stroke-width="0.5" opacity=".04"/>
+  </svg>
+
+  <!-- Left: Abstract tree / roots form -->
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;">
+    <svg viewBox="0 0 420 520" style="width:min(36vw,360px);height:auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Tree trunk (central spine) -->
+      <rect x="200" y="100" width="20" height="320" fill="#2B4535" rx="2"/>
+      <!-- Top branches (Modern Era Tiram elements) -->
+      <path d="M210,100 Q140,60 80,30" stroke="#2B4535" stroke-width="12" stroke-linecap="round" fill="none"/>
+      <path d="M210,100 Q280,60 340,30" stroke="#2B4535" stroke-width="12" stroke-linecap="round" fill="none"/>
+      <path d="M210,160 Q130,130 70,110" stroke="#2B4535" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <path d="M210,160 Q290,130 350,110" stroke="#2B4535" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <!-- Branch labels (modern) -->
+      <text x="58" y="28" font-family="Jost,sans-serif" font-size="11" fill="#2B4535" fill-opacity=".6" text-anchor="end" letter-spacing="1">THE PLAZAS</text>
+      <text x="354" y="28" font-family="Jost,sans-serif" font-size="11" fill="#2B4535" fill-opacity=".6" text-anchor="start" letter-spacing="1">PLAYGROUNDS</text>
+      <text x="58" y="108" font-family="Jost,sans-serif" font-size="11" fill="#2B4535" fill-opacity=".5" text-anchor="end" letter-spacing="1">BACK LANES</text>
+      <text x="354" y="108" font-family="Jost,sans-serif" font-size="11" fill="#2B4535" fill-opacity=".5" text-anchor="start" letter-spacing="1">LAMAN BUDAYA</text>
+      <!-- Root system (Kampung DNA) -->
+      <path d="M210,420 Q140,460 80,490" stroke="#3B2A1E" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <path d="M210,420 Q280,460 340,490" stroke="#3B2A1E" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <path d="M210,360 Q140,390 80,410" stroke="#3B2A1E" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <path d="M210,360 Q280,390 340,410" stroke="#3B2A1E" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <!-- Root labels (traditional) -->
+      <text x="68" y="494" font-family="Cormorant Garamond,serif" font-size="13" font-style="italic" fill="#3B2A1E" fill-opacity=".6" text-anchor="end" letter-spacing="1">Anjung Rumah</text>
+      <text x="354" y="494" font-family="Cormorant Garamond,serif" font-size="13" font-style="italic" fill="#3B2A1E" fill-opacity=".6" text-anchor="start" letter-spacing="1">Laman Rumah</text>
+      <text x="68" y="412" font-family="Cormorant Garamond,serif" font-size="13" font-style="italic" fill="#3B2A1E" fill-opacity=".5" text-anchor="end" letter-spacing="1">Selang Rumah</text>
+      <text x="354" y="412" font-family="Cormorant Garamond,serif" font-size="13" font-style="italic" fill="#3B2A1E" fill-opacity=".5" text-anchor="start" letter-spacing="1">Kebun</text>
+      <!-- Era Tiram mark at junction -->
+      <g transform="translate(186,238)">
+        <rect x="0" y="0" width="48" height="4" fill="#2B4535"/>
+        <rect x="0" y="6" width="48" height="3" fill="#2B4535"/>
+        <rect x="0" y="43" width="48" height="3" fill="#2B4535"/>
+        <rect x="0" y="48" width="48" height="4" fill="#2B4535"/>
+        <rect x="22" y="9" width="4" height="34" fill="#2B4535"/>
+        <rect x="0" y="9" width="48" height="3.5" fill="#2B4535"/>
+        <path d="M22 20 Q12 17 4 12" stroke="#2B4535" stroke-width="3" stroke-linecap="round"/>
+        <path d="M26 20 Q36 17 44 12" stroke="#2B4535" stroke-width="3" stroke-linecap="round"/>
+        <path d="M22 31 Q12 34 4 39" stroke="#2B4535" stroke-width="3" stroke-linecap="round"/>
+        <path d="M26 31 Q36 34 44 39" stroke="#2B4535" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <!-- NOW / THEN divider line -->
+      <line x1="30" y1="290" x2="390" y2="290" stroke="#2B4535" stroke-width="0.5" stroke-dasharray="6,6" opacity=".3"/>
+      <text x="420" y="295" font-family="Jost,sans-serif" font-size="9" fill="#2B4535" fill-opacity=".35" text-anchor="start" letter-spacing="3">TODAY</text>
+      <text x="420" y="310" font-family="Jost,sans-serif" font-size="9" fill="#3B2A1E" fill-opacity=".3" text-anchor="start" letter-spacing="3">ROOTS</text>
+    </svg>
+  </div>
+
+  <!-- Right: Typography -->
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(3rem,6vw,7rem);position:relative;z-index:2;border-left:1px solid rgba(43,69,53,.1);">
+    <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.4em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Pillar 03</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,9vw,7.5rem);font-weight:300;line-height:.88;color:#1D3226;letter-spacing:-.02em;margin-bottom:clamp(1.5rem,3vh,2.5rem);">Rooted.</div>
+    <div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;color:#3B2A1E;opacity:.6;line-height:1.8;max-width:360px;margin-bottom:clamp(1.5rem,3vh,2.5rem);">The kampung wasn't inefficient. It was a 15-minute city 500 years before the term existed. Era Tiram rebuilds that spatial logic in contemporary form.</div>
+    <blockquote style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.8vw,1.3rem);font-style:italic;font-weight:300;color:#2B4535;opacity:.7;line-height:1.65;border-left:2px solid #7A9B7F;padding-left:clamp(.8rem,1.5vw,1.2rem);margin:0;">"The kampung wasn't inefficient.<br>It was ahead of its time."</blockquote>
+    <div style="margin-top:clamp(1.5rem,3vh,2.5rem);display:flex;flex-direction:column;gap:8px;">
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;color:#8B5A2B;">Laman Budaya — Johorean cultural courtyards</div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.2em;color:#8B5A2B;">Kebun Orchards — community food production</div>
+    </div>
+  </div>
+
+  <div class="chrome-top" style="position:absolute;top:0;left:0;right:0;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(43,69,53,.3)">15 / 38</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;bottom:0;left:0;right:0;">
+    <div class="act-tag" style="color:rgba(43,69,53,.25)">Act 03 — Brand Platform · Key Visual</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE sct5 (13/34): PILLAR 04 — EQUITABLE
+════════════════════════════════════════════ -->
+<section class="slide" id="sct5" aria-label="Pillar 04 — Equitable">
+  <div class="slide-content">
+    <div class="et-lbl et-lbl-cream reveal d1">Act 03 — Brand Platform · Pillar 04</div>
+    <div class="two-col">
+      <div>
+        <div class="reveal d2" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:300;line-height:1.0;color:#F5F1D6;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Equitable.</div>
+        <p class="reveal d3" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;line-height:1.8;color:#F5F1D6;opacity:.55;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">The only township in Johor where your neighbour might earn RM4,000 a month or RM14,000 — and your children go to the same school, play in the same park, and grow up in the same community.</p>
+        <div class="reveal d4" style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;color:#F5F1D6;opacity:.4;margin-bottom:clamp(.8rem,1.5vh,1.2rem);border-left:2px solid #7A9B7F;padding-left:clamp(.8rem,1.5vw,1.2rem);">All mixed-income homes within <strong style="color:#7A9B7F;font-weight:500;">450m</strong> of a school and feeder bus stop. Designed in from the first line of the masterplan.</div>
+        <blockquote class="reveal d5" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2vw,1.4rem);font-style:italic;font-weight:300;color:#F5F1D6;opacity:.5;line-height:1.65;margin:0;">"You don't outgrow Era Tiram.<br>You grow into it."</blockquote>
+      </div>
+      <div class="reveal d3">
+        <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.25em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Housing Spectrum</div>
+        <div class="housing-spectrum">
+          <div class="hs-item"><div class="hs-bar" style="width:20%;background:rgba(122,155,127,.35);"></div><div class="hs-label">Value Homes A — 720sqft</div><div class="hs-price">RM50,000</div></div>
+          <div class="hs-item"><div class="hs-bar" style="width:35%;background:rgba(122,155,127,.45);"></div><div class="hs-label">Value Homes D — 1,400sqft</div><div class="hs-price">RM300,000</div></div>
+          <div class="hs-item"><div class="hs-bar" style="width:60%;background:rgba(122,155,127,.6);"></div><div class="hs-label">Value Plus 1–4</div><div class="hs-price">RM375k–RM500k</div></div>
+          <div class="hs-item"><div class="hs-bar" style="width:85%;background:rgba(122,155,127,.8);"></div><div class="hs-label">Premium — 1,500–4,000sqft</div><div class="hs-price">&gt;RM550,000</div></div>
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.25em;text-transform:uppercase;color:#7A9B7F;margin-bottom:clamp(.6rem,1.2vh,1rem);margin-top:clamp(1rem,2vh,1.5rem);">Resident Lifecycle</div>
+        <div class="lifecycle-arc">
+          <div class="lc-stage">
+            <div class="lc-title">Young Entrepreneur</div>
+            <div class="lc-sub">Single · Entry</div>
+          </div>
+          <div class="lc-stage">
+            <div class="lc-title">First Home Owner</div>
+            <div class="lc-sub">Young family</div>
+          </div>
+          <div class="lc-stage">
+            <div class="lc-title">Lifetime Home Owner</div>
+            <div class="lc-sub">Medium family</div>
+          </div>
+          <div class="lc-stage">
+            <div class="lc-title">High Income</div>
+            <div class="lc-sub">Various stages</div>
+          </div>
+        </div>
+        <div style="font-family:'Jost',sans-serif;font-size:var(--small-size);font-weight:300;color:#F5F1D6;opacity:.3;margin-top:clamp(.6rem,1.2vh,1rem);line-height:1.6;">Same township. Same park. Different stage of life. Full integration: same block, same plot — affordable and market-rate units side by side.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ghost-num" style="color:rgba(245,241,214,.04)">04</div>
+  <div class="chrome-top">
+    <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">16 / 38</div>
+  </div>
+  <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Platform · Equitable</div></div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     KEY VISUAL: EQUITABLE
+════════════════════════════════════════════ -->
+<section class="slide" id="sct5v" aria-label="Key Visual — Equitable" style="background:#7A9B7F;overflow:hidden;display:flex;flex-direction:column;">
+  <!-- Upper: Typography area -->
+  <div style="flex:1;display:flex;align-items:flex-end;padding:clamp(3rem,5vw,6rem) clamp(3rem,6vw,7rem) clamp(1.5rem,3vh,2.5rem);position:relative;z-index:2;">
+    <div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--label-size);letter-spacing:.4em;text-transform:uppercase;color:rgba(245,241,214,.65);margin-bottom:clamp(.8rem,1.5vh,1.2rem);">Pillar 04</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,9vw,7.5rem);font-weight:300;line-height:.88;color:#F5F1D6;letter-spacing:-.02em;margin-bottom:clamp(1rem,2vh,1.6rem);">Equitable.</div>
+      <div style="font-family:'Jost',sans-serif;font-size:var(--body-size);font-weight:300;color:#F5F1D6;opacity:.6;line-height:1.8;max-width:640px;">RM50,000 to RM550,000+. Same park. Same school. Same community. The only township in Johor where your neighbour's income doesn't determine your experience.</div>
+    </div>
+  </div>
+
+  <!-- Lower: City silhouette — equal buildings on shared baseline -->
+  <div style="flex:0 0 auto;padding:0 clamp(3rem,6vw,7rem);position:relative;z-index:2;">
+    <svg viewBox="0 0 1400 260" style="width:100%;height:auto;display:block;" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Ground line -->
+      <line x1="0" y1="220" x2="1400" y2="220" stroke="#F5F1D6" stroke-width="1" opacity=".4"/>
+
+      <!-- Building silhouettes — different heights, same baseline, same mark -->
+      <!-- Value Home A (small) -->
+      <rect x="20" y="170" width="60" height="50" fill="#F5F1D6" opacity=".15" rx="1"/>
+      <rect x="20" y="170" width="60" height="50" stroke="#F5F1D6" stroke-width="1" opacity=".3" fill="none" rx="1"/>
+      <text x="50" y="155" font-family="Jost,sans-serif" font-size="8" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="1">RM50k</text>
+      <g transform="translate(37,181) scale(0.35)"><rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/><rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/><rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/><rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/><path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/></g>
+
+      <!-- Value Home B -->
+      <rect x="100" y="150" width="60" height="70" fill="#F5F1D6" opacity=".18" rx="1"/>
+      <rect x="100" y="150" width="60" height="70" stroke="#F5F1D6" stroke-width="1" opacity=".35" fill="none" rx="1"/>
+      <text x="130" y="136" font-family="Jost,sans-serif" font-size="8" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="1">RM100k</text>
+      <g transform="translate(117,163) scale(0.35)"><rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/><rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/><rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/><rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/><path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/></g>
+
+      <!-- Value Home D -->
+      <rect x="180" y="120" width="75" height="100" fill="#F5F1D6" opacity=".2" rx="1"/>
+      <rect x="180" y="120" width="75" height="100" stroke="#F5F1D6" stroke-width="1" opacity=".4" fill="none" rx="1"/>
+      <text x="217" y="106" font-family="Jost,sans-serif" font-size="8" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="1">RM300k</text>
+      <g transform="translate(200,136) scale(0.35)"><rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/><rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/><rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/><rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/><path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/></g>
+
+      <!-- Value Plus -->
+      <rect x="275" y="90" width="90" height="130" fill="#F5F1D6" opacity=".22" rx="1"/>
+      <rect x="275" y="90" width="90" height="130" stroke="#F5F1D6" stroke-width="1" opacity=".45" fill="none" rx="1"/>
+      <text x="320" y="76" font-family="Jost,sans-serif" font-size="8" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="1">RM400k</text>
+      <g transform="translate(296,106) scale(0.35)"><rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/><rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/><rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/><rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/><path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/></g>
+
+      <!-- Premium -->
+      <rect x="385" y="40" width="120" height="180" fill="#F5F1D6" opacity=".28" rx="1"/>
+      <rect x="385" y="40" width="120" height="180" stroke="#F5F1D6" stroke-width="1.5" opacity=".6" fill="none" rx="1"/>
+      <text x="445" y="26" font-family="Jost,sans-serif" font-size="8" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="1">RM550k+</text>
+      <g transform="translate(421,60) scale(0.35)"><rect x="0" y="0" width="48" height="4" fill="#F5F1D6"/><rect x="0" y="6" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="43" width="48" height="3" fill="#F5F1D6"/><rect x="0" y="48" width="48" height="4" fill="#F5F1D6"/><rect x="22" y="9" width="4" height="34" fill="#F5F1D6"/><rect x="0" y="9" width="48" height="3.5" fill="#F5F1D6"/><path d="M22 20 Q12 17 4 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 20 Q36 17 44 12" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M22 31 Q12 34 4 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/><path d="M26 31 Q36 34 44 39" stroke="#F5F1D6" stroke-width="3" stroke-linecap="round"/></g>
+
+      <!-- Shared ground elements (park elements visible behind all) — equal access for all -->
+      <text x="700" y="200" font-family="Cormorant Garamond,serif" font-size="22" font-style="italic" font-weight="300" fill="#F5F1D6" fill-opacity=".5" text-anchor="middle" letter-spacing="2">Same park.</text>
+      <text x="900" y="200" font-family="Cormorant Garamond,serif" font-size="22" font-style="italic" font-weight="300" fill="#F5F1D6" fill-opacity=".5" text-anchor="middle" letter-spacing="2">Same school.</text>
+      <text x="1110" y="200" font-family="Cormorant Garamond,serif" font-size="22" font-style="italic" font-weight="300" fill="#F5F1D6" fill-opacity=".5" text-anchor="middle" letter-spacing="2">Same community.</text>
+
+      <!-- Shared baseline annotation -->
+      <line x1="20" y1="235" x2="510" y2="235" stroke="#F5F1D6" stroke-width="1" opacity=".3"/>
+      <line x1="20" y1="230" x2="20" y2="240" stroke="#F5F1D6" stroke-width="1" opacity=".3"/>
+      <line x1="510" y1="230" x2="510" y2="240" stroke="#F5F1D6" stroke-width="1" opacity=".3"/>
+      <text x="265" y="252" font-family="Jost,sans-serif" font-size="9" fill="#F5F1D6" fill-opacity=".4" text-anchor="middle" letter-spacing="3">SAME BLOCK — SAME PLOT — FULL INTEGRATION</text>
+    </svg>
+  </div>
+
+  <div style="flex:0 0 auto;padding:clamp(.8rem,1.5vh,1.2rem) clamp(3rem,6vw,7rem);position:relative;z-index:2;">
+    <div style="font-family:'Jost',sans-serif;font-size:var(--small-size);color:#F5F1D6;opacity:.4;letter-spacing:.1em;">8,878 housing units · 28% affordable · 72% open market · all within 450m of a school and feeder bus stop</div>
+  </div>
+
+  <div class="chrome-top" style="position:absolute;top:0;left:0;right:0;">
+    <div style="width:80px"></div>
+    <div class="slide-counter" style="color:rgba(245,241,214,.3)">17 / 38</div>
+  </div>
+  <div class="chrome-bottom" style="position:absolute;bottom:0;left:0;right:0;">
+    <div class="act-tag" style="color:rgba(245,241,214,.25)">Act 03 — Brand Platform · Key Visual</div>
+  </div>
 </section>
 
 <!-- ═══════════════════════════════════════════
@@ -855,7 +1574,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   </div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">08 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">18 / 38</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Creative Strategy</div></div>
 </section>
@@ -892,7 +1611,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
     </div>
   </div>
   <div class="ghost-num" style="color:rgba(43,69,53,.06)">08</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">09 / 28</div></div>
+  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">19 / 38</div></div>
   <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — Creative Strategy</div></div>
 </section>
 
@@ -930,7 +1649,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
       </div>
     </div>
   </div>
-  <div class="chrome-top" style="z-index:11"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">10 / 28</div></div>
+  <div class="chrome-top" style="z-index:11"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">20 / 38</div></div>
   <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — Creative Strategy</div></div>
 </section>
 
@@ -944,7 +1663,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-09.png" alt="Modern Heritage moodboard 4" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(59,42,30,.4)">11 / 28</div>
+    <div class="slide-counter" style="color:rgba(59,42,30,.4)">21 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(59,42,30,.35)">Act 03 — Creative Strategy · Direction 01</div>
@@ -961,7 +1680,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-13.png" alt="Clean Modernism moodboard 4" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">12 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">22 / 38</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Creative Strategy · Direction 02</div>
@@ -1022,7 +1741,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <div class="ghost-num" style="color:rgba(245,241,214,.04)">10</div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">13 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">23 / 38</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Creative Strategy</div></div>
 </section>
@@ -1061,7 +1780,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
     </div>
   </div>
   <div class="ghost-num" style="color:rgba(43,69,53,.05)">11</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">14 / 28</div></div>
+  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">24 / 38</div></div>
   <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 03 — Creative Strategy</div></div>
 </section>
 
@@ -1117,7 +1836,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <div class="ghost-num" style="color:rgba(245,241,214,.04)">12</div>
   <div class="chrome-top">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">15 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">25 / 38</div>
   </div>
   <div class="chrome-bottom"><div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Creative Strategy</div></div>
 </section>
@@ -1129,7 +1848,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-19.png" alt="Era Tiram precinct logo suites — all 8 precincts" style="width:100%;height:100%;object-fit:contain;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(29,50,38,.4)">16 / 28</div>
+    <div class="slide-counter" style="color:rgba(29,50,38,.4)">26 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(29,50,38,.35)">Act 03 — Logo Suites · Precincts</div>
@@ -1143,7 +1862,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-20.png" alt="Era Tiram billboard and wayfinding signage applications" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <svg width="80" height="12" viewBox="0 0 102 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.15386 14.4778C3.34233 14.4778 4.30577 13.4671 4.30577 12.2203C4.30577 10.9736 3.34233 9.96289 2.15386 9.96289C0.965395 9.96289 0.00195312 10.9736 0.00195312 12.2203C0.00195312 13.4671 0.965395 14.4778 2.15386 14.4778Z" fill="#00BBBE"/><path d="M18.8795 9.72083L17.865 10.9065V14.3823H13.4229V0.319458H17.865V5.42204L22.269 0.319458H27.1894L21.8273 6.5071L27.4575 14.3808H22.2309L18.8795 9.72083Z" fill="white"/><path d="M33.8125 10.8459H32.5876V14.3808H28.0693V0.319458H34.5222C38.256 0.319458 40.6308 2.36819 40.6308 5.62188C40.6308 7.65137 39.7122 9.17756 38.1036 10.0406L40.9187 14.3793H36.0928L33.8139 10.8444L33.8125 10.8459ZM34.233 3.97579H32.5862V7.26945H34.233C35.4775 7.26945 36.0716 6.64625 36.0716 5.62188C36.0716 4.59752 35.4775 3.97431 34.233 3.97431V3.97579Z" fill="white"/><path d="M42.333 0.319336H46.8513V14.3807H42.333V0.319336Z" fill="white"/><path d="M62.2452 10.5039C62.2452 12.9553 60.2725 14.3808 56.5769 14.3808H49.0332V0.319458H56.1945C59.8901 0.319458 61.6131 1.86637 61.6131 3.99504C61.6131 5.30066 60.9809 6.38572 59.7561 7.02817C61.3266 7.63065 62.2452 8.83561 62.2452 10.5039ZM53.4753 3.63384V5.72254H55.5821C56.5966 5.72254 57.0566 5.36135 57.0566 4.67745C57.0566 3.99356 56.5966 3.63236 55.5821 3.63236H53.4753V3.63384ZM57.6874 9.96064C57.6874 9.23825 57.1893 8.85633 56.1945 8.85633H53.4753V11.0664H56.1945C57.1907 11.0664 57.6874 10.6845 57.6874 9.96211V9.96064Z" fill="white"/><path d="M77.047 10.5039C77.047 12.9553 75.0743 14.3808 71.3786 14.3808H63.835V0.319458H70.9962C74.6919 0.319458 76.4148 1.86637 76.4148 3.99504C76.4148 5.30066 75.7826 6.38572 74.5578 7.02817C76.1284 7.63065 77.047 8.83561 77.047 10.5039ZM68.2771 3.63384V5.72254H70.3838C71.3984 5.72254 71.8584 5.36135 71.8584 4.67745C71.8584 3.99356 71.3984 3.63236 70.3838 3.63236H68.2771V3.63384ZM72.4892 9.96064C72.4892 9.23825 71.991 8.85633 70.9962 8.85633H68.2771V11.0664H70.9962C71.9925 11.0664 72.4892 10.6845 72.4892 9.96211V9.96064Z" fill="white"/><path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/><path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/><path d="M4.67377 4.49901C4.67377 4.01643 5.09428 3.61527 6.41647 3.61527C7.58485 3.61527 8.82943 3.95722 10.1502 4.66036L11.5091 1.22459C10.1121 0.400062 8.25511-0.00109863 6.45457-0.00109863C2.29891-0.00109863 0.211914 2.12757 0.211914 4.73881C0.211914 9.98203 7.62295 8.55502 7.62295 10.3225C7.62295 10.8051 7.16293 11.0863 5.88025 11.0863C5.62344 11.0863 5.36097 11.0656 5.09569 11.0375C5.22974 11.4046 5.30735 11.8028 5.30735 12.2202C5.30735 13.1632 4.92918 14.0129 4.32523 14.6154C4.82476 14.6716 5.33416 14.7027 5.84356 14.7027C9.99922 14.7027 12.0862 12.5326 12.0862 9.9613C12.0862 4.77878 4.67518 6.18506 4.67518 4.49752L4.67377 4.49901Z" fill="white"/></svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">17 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">27 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Environmental</div>
@@ -1157,7 +1876,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-21.png" alt="Era Tiram brochure and social media post applications" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">18 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">28 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Print &amp; Digital</div>
@@ -1171,7 +1890,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-22.png" alt="Era Tiram site hoarding application" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">19 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">29 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Environmental</div>
@@ -1185,7 +1904,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-23.png" alt="Era Tiram building facade and tote bag merchandise" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">20 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">30 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Merchandise</div>
@@ -1199,7 +1918,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-24.png" alt="Era Tiram hard hat and uniform applications" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(29,50,38,.35)">21 / 28</div>
+    <div class="slide-counter" style="color:rgba(29,50,38,.35)">31 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(29,50,38,.3)">Act 03 — Brand Applications · Uniforms</div>
@@ -1213,7 +1932,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-25.png" alt="Era Tiram logo on architectural render" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">22 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">32 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Spatial</div>
@@ -1227,7 +1946,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-26.png" alt="Era Tiram site workers in branded uniforms" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">23 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">33 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Uniforms</div>
@@ -1241,7 +1960,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-27.png" alt="Era Tiram business cards and building render with EST 2026" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">24 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">34 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · Print</div>
@@ -1255,7 +1974,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-28.png" alt="Era Tiram transit advertising — airport lightbox and billboard" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">25 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">35 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · OOH Media</div>
@@ -1269,7 +1988,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
   <img src="moodboards/page-29.png" alt="Era Tiram outdoor kiosk display and flag banner" style="width:100%;height:100%;object-fit:cover;display:block;">
   <div class="chrome-top" style="position:absolute;">
     <div style="width:80px"></div>
-    <div class="slide-counter" style="color:rgba(255,255,255,.3)">26 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.3)">36 / 38</div>
   </div>
   <div class="chrome-bottom" style="position:absolute;">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">Act 03 — Brand Applications · OOH Media</div>
@@ -1309,7 +2028,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
     </div>
   </div>
   <div class="ghost-num" style="color:rgba(43,69,53,.05)">13</div>
-  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">27 / 28</div></div>
+  <div class="chrome-top"><div style="width:80px"></div><div class="slide-counter" style="color:#aaa">37 / 38</div></div>
   <div class="chrome-bottom"><div class="act-tag" style="color:#aaa">Act 04 — The Engagement</div></div>
 </section>
 
@@ -1337,7 +2056,7 @@ html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
       <path d="M78.6328 0.319336H83.1511V10.7051H89.2019V14.3807H78.6328V0.319336Z" fill="white"/>
       <path d="M101.59 10.8058V14.3807H90.4453V0.319336H101.34V3.89573H94.8874V5.54331H100.556V8.95835H94.8874V10.8058H101.59Z" fill="white"/>
     </svg>
-    <div class="slide-counter" style="color:rgba(255,255,255,.35)">28 / 28</div>
+    <div class="slide-counter" style="color:rgba(255,255,255,.35)">38 / 38</div>
   </div>
   <div class="chrome-bottom">
     <div class="act-tag" style="color:rgba(255,255,255,.3)">End of Proposal</div>
